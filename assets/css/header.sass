@@ -1,9 +1,10 @@
 header, footer
-    padding: 0 10px
+    padding: 0 10px !important
     @include sizePlus(900px)    
-        padding: 0 50px        
+        padding: 0 50px !important
     @include plus1441()        
-        padding: 0 140px
+        padding: 0 140px !important
+
 header
     font-family: lightcondensed !important
     display: flex
@@ -11,23 +12,30 @@ header
     justify-content: center
     align-items: center
     font-weight: 100
-    padding: 0 10px
     flex-direction: column-reverse
     @include plus769()
         flex-direction: row
         height: 160px  
-        justify-content: space-between     
+        justify-content: space-between   
+        display: grid 
+        grid-template-columns: 1fr auto 1fr
+        grid-gap: 32px 
     nav
         color: $blackFont
         font-size: 14px
-        line-height: 16px        
-        max-width: 600px
-        @include plus769()
-            flex: 1
+        line-height: 16px     
+        @include plus769() 
+            min-width: 460px
+        @include sizePlus(850px)   
+            min-width: 480px
+        @include sizePlus(950px)  
+            min-width: 500px
+        @include plus1025()
+            min-width: 600px
         @include plus1441()
             font-size: 16px
             line-height: 18px
-            max-width: 773px
+            min-width: 773px
         ul
             display: flex
             justify-content: space-between
@@ -43,14 +51,15 @@ a.hashtag-ig
     @include plus769()
         font-size: 18px
         line-height: 21px
-        margin-right: 42px
 .header-iconmenu-ul
     display: none    
     @include plus769()
+        justify-self: flex-end
         display: flex
-        margin-left: 42px
     li:nth-child(2)
-        margin: 0 40px
+        margin: 0 20px
+        @include plus1025()
+            margin: 0 40px
 .header-nav-logo
     margin-bottom: 9px
     @include plus769()
