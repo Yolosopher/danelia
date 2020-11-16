@@ -1,0 +1,57 @@
+header, footer
+    padding: 0 10px
+    @include sizePlus(900px)    
+        padding: 0 50px        
+    @include plus1441()        
+        padding: 0 140px
+header
+    font-family: lightcondensed !important
+    display: flex
+    height: 131px
+    justify-content: center
+    align-items: center
+    font-weight: 100
+    padding: 0 10px
+    flex-direction: column-reverse
+    @include plus769()
+        flex-direction: row
+        height: 160px  
+        justify-content: space-between     
+    nav
+        color: $blackFont
+        font-size: 14px
+        line-height: 16px        
+        max-width: 600px
+        @include plus769()
+            flex: 1
+        @include plus1441()
+            font-size: 16px
+            line-height: 18px
+            max-width: 773px
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            li:not(.header-nav-logo)
+                display: none
+                @include plus769()
+                    display: initial
+a.hashtag-ig
+    color: $lightred
+    font-size: 16px
+    line-height: 18px
+    @include plus769()
+        font-size: 18px
+        line-height: 21px
+        margin-right: 42px
+.header-iconmenu-ul
+    display: none    
+    @include plus769()
+        display: flex
+        margin-left: 42px
+    li:nth-child(2)
+        margin: 0 40px
+.header-nav-logo
+    margin-bottom: 9px
+    @include plus769()
+        margin-bottom: 0

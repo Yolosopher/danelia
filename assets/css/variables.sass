@@ -1,0 +1,31 @@
+// colors
+$blackFont: #171717
+$lightred: #EA433D
+
+
+$width361: 361px
+$width769: 769px
+$width1025: 1025px
+$width1441: 1441px
+
+
+
+@mixin plus361()
+    @media screen and (min-width: $width361)
+        @content
+
+@mixin plus769()
+    @media screen and (min-width: $width769)
+        @content
+
+@mixin plus1025()
+    @media screen and (min-width: $width1025)
+        @content
+
+@mixin plus1441()
+    @media screen and (min-width: $width1441)
+        @content
+
+@mixin sizePlus($width)
+    @media screen and (min-width: $width)
+        @content
