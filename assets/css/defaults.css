@@ -19,9 +19,11 @@ a {
 
 ul li {
   list-style-position: inside;
+  list-style: none;
 }
 
-ul:not(.default-ul) li {
-  list-style: none;
+div.default-ul ul li {
+  list-style: initial;
+  list-style-position: inside;
 }
 /*# sourceMappingURL=defaults.css.map */
