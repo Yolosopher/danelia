@@ -3,6 +3,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
+  resize: none;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 a {

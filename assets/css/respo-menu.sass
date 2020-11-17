@@ -1,0 +1,70 @@
+.respo-menu
+    position: fixed
+    bottom: 0
+    z-index: 1
+    width: 100%
+    height: 110px
+    border-radius: 30px 30px 0 0
+    display: grid   
+    background-color: #fff
+    grid-template-columns: repeat(6, 1fr)
+    padding: 0 42px
+    justify-items: center
+    align-items: center
+    
+    @include plus769()
+        display: none
+    .hr
+        display: block
+        width: 1px
+        height: 24px
+        background-color: $blackFont
+        border-radius: 5px
+        opacity: .1
+        // justify-self: center
+    a
+        display: block
+        cursor: pointer
+        svg path
+            fill: rgba(23, 23, 23, 0.1)
+        &.active
+            svg path
+                stroke: #C4B3FA
+                fill: transparent
+.respo-menu-home
+    // justify-self: flex-start
+.burger-container
+    // justify-self: flex-end
+    width: 32px
+    height: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+.burger
+    display: block
+    height: 12px
+    position: relative
+    width: 32px
+    cursor: pointer
+    span
+        width: 32px
+        height: 2px
+        background-color: $blackFont
+        display: block
+        position: absolute
+        border-radius: 15px
+        &:nth-child(2) 
+            top: 6px
+        &:nth-child(3) 
+            top: 12px
+    &.active
+        span
+            &:nth-child(1)
+                transform: rotate(45deg)
+                top: 6px
+            &:nth-child(2)
+                width: 0
+            &:nth-child(3)
+                transform: rotate(-45deg)
+                top: 6px
+            
