@@ -27,7 +27,6 @@ window.addEventListener('load', () => {
     a.forEach(element => {
         element.elem.addEventListener('mouseenter', () => {
             element.elem.style.color = element.color;
-            element.elem.style.backgroundColor = '#fff';
         })
         element.elem.addEventListener('touchstart', () => {
             element.elem.style.color = element.color;
