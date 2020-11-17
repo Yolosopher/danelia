@@ -587,7 +587,7 @@ footer {
   }
 }
 
-.article-left a:hover, .article-left a:focus, .article-left a:active {
+.article-left a:hover {
   background-color: #fff;
 }
 

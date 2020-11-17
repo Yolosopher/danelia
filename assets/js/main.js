@@ -27,9 +27,23 @@ window.addEventListener('load', () => {
     a.forEach(element => {
         element.elem.addEventListener('mouseenter', () => {
             element.elem.style.color = element.color;
+            element.elem.style.backgroundColor = '#fff';
         })
+        element.elem.addEventListener('touchstart', () => {
+            element.elem.style.color = element.color;
+            element.elem.style.backgroundColor = '#fff';
+        })
+
         element.elem.addEventListener('mouseleave', () => {
             element.elem.style.color = '#fff';
+        })
+        element.elem.addEventListener('touchend', () => {
+            element.elem.style.color = '#fff';
+            element.elem.style.backgroundColor = element.color;
+        })
+        element.elem.addEventListener('touchcancel', () => {
+            element.elem.style.color = '#fff';
+            element.elem.style.backgroundColor = element.color;
         })
     })
 })
