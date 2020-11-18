@@ -27,3 +27,13 @@ ul
 div.default-ul ul li
     list-style: initial
     list-style-position: inside
+
+html
+    @include plus1025()
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+            display: none
+
+body
+    color: $blackFont
+    

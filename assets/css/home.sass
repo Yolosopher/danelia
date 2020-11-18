@@ -75,3 +75,156 @@
             padding: 15px 26px 15px 32px
         &:hover
             background-color: #fff
+
+
+// aboutus
+.home-aboutus 
+    position: relative   
+    font-family: bld
+    display: grid
+    grid-template-columns: 100%
+    grid-auto-rows: minmax(262px, auto)
+    @include plus769()
+        margin-bottom: 0
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: unset
+        grid-auto-rows: 450px
+    img
+        width: 100%
+        object-fit: cover
+        height: 100%
+    h2
+        font-size: 22px
+        line-height: 27px
+        position: absolute
+        top: 27px
+        left: 15px
+        @include plus769()
+            position: static
+            margin-bottom: 50px
+
+.home-aboutus-textbox
+    align-self: center
+    height: 100%
+    @include plus769()
+        height: unset
+        padding: 0 7.25vw
+.home-aboutus-textbox-inner
+    padding: 30px
+    background-color: #fff    
+    width: calc( 100% - 30px )
+    margin: 0 auto
+    margin-top: -46px
+    @include plus769()
+        margin: 0
+        padding: 0
+        width: unset
+        background-color: none
+    @include sizePlus(1800px)    
+        max-width: 55%
+        
+
+.home-aboutus-textdiv
+    font-family: lght
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 20px
+    @include plus769()
+        margin-bottom: 30px
+
+
+.home-aboutus-imgdiv
+    align-self: flex-end
+    height: 176px
+    @include plus769()
+        height: 100%
+        align-self: stretch
+
+    
+.home-aboutus-textbox-a
+    font-size: 14px
+    line-height: 17px
+    white-space: nowrap
+    &::before
+        margin-right: 15px
+        content: ''
+        display: inline-block
+        border-radius: 50%
+        width: 9px
+        height: 9px
+        background-color: $lightred
+
+// instagram section
+
+.home-instaAndSlider
+    width: 100%
+    overflow: hidden
+    display: flex
+    height: 385px
+    position: relative
+    @include plus769()
+        height: 450px
+    .swiper-container 
+        width: 100vw
+        display: flex
+        position: static        
+        overflow: hidden
+        height: calc(100% - 86px)
+        align-self: flex-end
+        @include plus769()
+            position: absolute
+            left: 28%
+            height: 100%
+            align-self: unset
+    .swiper-wrapper
+        display: flex
+        width: 100vw
+        img 
+            height: 100%
+            width: 72.5%
+            object-fit: cover
+            @include plus769()
+                width: 22%
+
+
+.home-insta-article
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 3
+    background-color: #fff
+    height: 86px
+    padding: 0 7.25vw
+    font-family: boldoutline
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include plus769()
+        top: unset 
+        width: 28%
+        height: 100%
+        align-items: unset
+        justify-content: center
+        flex-direction: column
+    h2
+        font-size: 22px
+        line-height: 27px
+        @include plus769()
+            margin-bottom: 50px
+
+        
+.home-insta-article-textdiv
+    max-height: 85px
+    font-family: lght
+    font-size: 14px
+    line-height: 22px
+    overflow: hidden
+    display: none
+    margin-bottom: 30px
+    @include plus769()
+        display: block
+.home-insta-article-p
+    font-size: 14px
+    line-height: 17px
+    color: $lightred

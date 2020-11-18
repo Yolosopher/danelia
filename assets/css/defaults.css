@@ -32,4 +32,12 @@ div.default-ul ul li {
   list-style: initial;
   list-style-position: inside;
 }
+
+html {
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
 /*# sourceMappingURL=defaults.css.map */
