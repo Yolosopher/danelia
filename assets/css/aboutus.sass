@@ -54,4 +54,70 @@
     height: 200px
     background-color: $lightblue
 
+// contact page
+.contact-outter
+    width: 100%
+    position: relative
+    @include plus1025()
+        position: static
+    h1
+        @media screen and ( max-width: 364px )            
+            font-size: 16px
 
+.contact
+    width: 100%
+    @include plus769()    
+        display: grid   
+        grid-template-columns: 50% 50%
+    font-style: none
+.contact-left
+    font-family: bld    
+.contact-right
+    display: flex
+    flex-direction: column
+
+.contact-right-map
+    margin-top: 30px
+    width: 100%    
+    height: 200px
+    @include plus769()
+        margin-top: 0
+        flex: 1
+        height: unset
+    iframe
+        width: 100%
+        height: 100%
+
+.contact-left-heading
+    font-size: 14px
+    line-height: 17px
+    opacity: .3
+    margin-bottom: 7px
+    &:not(:first-child)
+        margin-top: 30px
+    + *
+        font-family: rmn
+        font-size: 16px
+        line-height: 24px
+    + span
+        display: block
+        max-width: 288px
+address
+    font-style: normal
+
+.contact-right-socials
+    display: flex
+    position: absolute
+    top: 0
+    right: 0
+    @include plus769()
+        position: static
+        margin-bottom: 30px
+    li
+        &:nth-child(2)
+            margin: 0 15px
+            @include plus769()
+                margin: 0 30px
+        a
+            height: 100%
+            display: inline-block
