@@ -504,7 +504,7 @@ footer {
   overflow: hidden;
 }
 
-.home-main-section article:nth-of-type() {
+.home-main-section article:nth-of-type {
   border-left: 5px solid black;
 }
 
@@ -661,7 +661,7 @@ footer {
   }
 }
 
-.home-aboutus-textbox-inner {
+.home-aboutus-textbox-inner, .aboutus-main > div {
   padding: 30px;
   background-color: #fff;
   width: calc( 100% - 30px);
@@ -670,7 +670,7 @@ footer {
 }
 
 @media screen and (min-width: 769px) {
-  .home-aboutus-textbox-inner {
+  .home-aboutus-textbox-inner, .aboutus-main > div {
     margin: 0;
     padding: 0;
     width: unset;
@@ -679,7 +679,7 @@ footer {
 }
 
 @media screen and (min-width: 1800px) {
-  .home-aboutus-textbox-inner {
+  .home-aboutus-textbox-inner, .aboutus-main > div {
     max-width: 55%;
   }
 }
@@ -857,5 +857,72 @@ footer {
   font-size: 14px;
   line-height: 17px;
   color: #EA433D;
+}
+
+.aboutus-main {
+  width: 100%;
+}
+
+.aboutus-main img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 769px) {
+  .aboutus-main img {
+    height: 450px;
+  }
+}
+
+.aboutus-main > div {
+  margin-top: -60px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 30px 30px 0 0px;
+}
+
+@media screen and (min-width: 769px) {
+  .aboutus-main > div {
+    max-width: 1088px;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: -60px;
+  }
+}
+
+.aboutus-main-article-outter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  border-radius: 30px 30px 0 0px;
+  background-color: #fff;
+  padding-top: 40px;
+}
+
+.aboutus-main-article-outter h1 {
+  font-family: bld;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 769px) {
+  .aboutus-main-article-outter h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.aboutus-main-article-outter p {
+  font-family: lght;
+  font: 14px;
+  line-height: 22px;
 }
 /*# sourceMappingURL=style.css.map */

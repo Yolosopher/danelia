@@ -1,8 +1,12 @@
 // variables
 const burger = document.querySelector(".burger");
-const homeMainArticles = document
+let homeMainArticles;
+if (document.querySelector('.home-main')) {
+    homeMainArticles = document
 	.querySelector(".home-main-section")
-	.querySelectorAll("article");
+    .querySelectorAll("article");    
+}
+    
 const homeMainImages = document.querySelectorAll(".article-right-imgdiv");
 let a = [];
 
@@ -15,16 +19,18 @@ burger.addEventListener("click", () => {
 
 // load
 window.addEventListener("load", () => {
-	// article bg-color setter
-	homeMainArticles.forEach((element) => {
-		let color = element.getAttribute("data-color");
-		element.style.backgroundColor = color;
-		let obj = {
-			elem: element.firstElementChild.lastElementChild,
-			color: color,
-		};
-		a = [...a, obj];
-	});
+    // article bg-color setter
+    if (homeMainArticles) {
+        homeMainArticles.forEach((element) => {
+            let color = element.getAttribute("data-color");
+            element.style.backgroundColor = color;
+            let obj = {
+                elem: element.firstElementChild.lastElementChild,
+                color: color,
+            };
+            a = [...a, obj];
+        });
+    }
 	a.forEach((element) => {
 		element.elem.addEventListener("mouseenter", () => {
 			element.elem.style.color = element.color;
