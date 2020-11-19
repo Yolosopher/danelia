@@ -41,6 +41,7 @@
         max-height: unset
     ~ .profile-container .orders-history-container        
         max-height: 0
+        overflow: hidden
         padding-top: 0
         padding-bottom: 0
         transform: translateX(500%)
@@ -73,8 +74,7 @@
             max-height: 0 
             padding-top: 0
             padding-bottom: 0
-            transform: translateX(-500%)
-           
+            transform: translateX(-500%)            
             @include plus769()
                 transform: translateX(-1000%)
         ~ .form-combiner .register-form
@@ -113,9 +113,9 @@
 
 // login-form
 form
-    transform-origin: center
     box-sizing: border-box
 .form
+    transform-origin: center
     overflow: hidden !important
     display: flex
     flex-direction: column

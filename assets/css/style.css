@@ -1248,6 +1248,7 @@ address {
 
 .login-menu-slider ~ .profile-container .orders-history-container {
   max-height: 0;
+  overflow: hidden;
   padding-top: 0;
   padding-bottom: 0;
   -webkit-transform: translateX(500%);
@@ -1366,13 +1367,13 @@ address {
 }
 
 form {
-  -webkit-transform-origin: center;
-          transform-origin: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .form, .profile-form-combiner form {
+  -webkit-transform-origin: center;
+          transform-origin: center;
   overflow: hidden !important;
   display: -webkit-box;
   display: -ms-flexbox;
