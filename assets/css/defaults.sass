@@ -12,6 +12,14 @@
     user-select: none
     -webkit-tap-highlight-color: transparent
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  
+    transition: background-color 5000s ease-in-out 0s
+
+
 a
     text-decoration: none
     color: inherit
@@ -38,9 +46,59 @@ body
     color: $blackFont
     background-color: $fbwhite
 
+
+
+
 header, footer, .login-menu-slider
     padding: 0 10px !important
     @include sizePlus(900px)    
         padding: 0 50px !important
     @include plus1441()        
         padding: 0 140px !important
+
+// info message window
+.success-error-message-outter
+    position: fixed
+    width: 0
+    height: 0
+    top: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(23, 23, 23, 0.5)
+    overflow: hidden
+    z-index: -999
+    opacity: 0
+    transition: opacity .5s ease-in-out
+    &.active
+        height: 100%
+        width: 100%
+        opacity: 1
+        z-index: 4
+.success-error-message
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 536px
+    height: 400px
+    max-width: calc( 100% - 60px )
+    max-height: 70%
+    overflow: hidden
+    background-color: #fff
+    font-family: rmn
+    font-size: 16px
+    line-height: 19px
+
+.success-error-message-x-btn
+    position: absolute
+    top: 36px
+    right: 36px
+    cursor: pointer
+    svg
+        width: 20px
+        height: 20px
+.sign-svg-div
+    margin-bottom: 72px

@@ -1,0 +1,449 @@
+// login menu slider
+.login-menu-slider
+    height: 80px
+    width: 100%
+    background-color: $blackFont
+    color: #fff
+    font-family: bld
+    font-size: 16px
+    line-height: 20px
+    ul
+        display: flex
+        align-items: center
+        height: 100%
+        width: 100%
+        overflow: hidden
+
+    a
+        display: block   
+        cursor: pointer  
+        white-space: nowrap
+    li
+        opacity: .6 
+        &.login, &.personal-info
+            opacity: 1  
+        &:last-of-type
+            margin-right: 0 !important
+    ~ .form-combiner .login-form
+        max-height: unset
+    ~ .form-combiner .register-form
+        max-height: 0
+        padding-top: 0
+        padding-bottom: 0
+        transform: translateX(500%)
+        transition: all .3s, padding-bottom 0s, padding-top 0s
+        @include plus769()
+            transform: translateX(1000%)
+            transition: all .8s, padding-bottom 0s, padding-top 0s
+
+        // orders
+    ~ .profile-container .personal-info-container
+        max-height: unset
+    ~ .profile-container .orders-history-container        
+        max-height: 0
+        padding-top: 0
+        padding-bottom: 0
+        transform: translateX(500%)
+        transition: all .3s, padding-bottom 0s, padding-top 0s
+        @include plus769()
+            transform: translateX(1000%)
+            transition: all .8s, padding-bottom 0s, padding-top 0s
+
+        // orders
+    &.orders
+        ~ .profile-container .personal-info-container
+            max-height: 0 
+            padding-top: 0
+            padding-bottom: 0
+            transform: translateX(-500%)
+            @include plus769()
+                transform: translateX(-1000%)
+        ~ .profile-container .orders-history-container
+            max-height: unset
+            padding: 90px 0
+            transform: translateX(0)
+            transition: all .3s, padding 0s
+            @include plus769()
+                transition: all .8s, padding 0s
+
+
+
+    &.register
+        ~ .form-combiner .login-form
+            max-height: 0 
+            padding-top: 0
+            padding-bottom: 0
+            transform: translateX(-500%)
+           
+            @include plus769()
+                transform: translateX(-1000%)
+        ~ .form-combiner .register-form
+            max-height: unset
+            padding: 90px 0
+            transform: translateX(0)
+            transition: all .3s, padding 0s
+            @include plus769()
+                transition: all .8s, padding 0s
+        li.login
+            opacity: .6
+        li.registration
+            opacity: 1
+    // profile.html
+    &.orders
+        li.personal-info
+            opacity: .6
+        li.order-history
+            opacity: 1
+
+
+
+
+// login form height
+.form-combiner
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    width: 100%
+
+.login-main
+    min-height: calc( 100vh - 444px )
+    @include plus769()
+        min-height: calc( 100vh - 349px )
+
+
+// login-form
+form
+    transform-origin: center
+    box-sizing: border-box
+.form
+    overflow: hidden !important
+    display: flex
+    flex-direction: column
+    font-family: bld
+    width: calc( 100% - 30px )
+    max-width: 403px
+    padding: 90px 0
+    margin: 0 auto
+    transform: translateX(0)
+    @include plus769()
+        width: 100%
+    label, a, .login-button
+        font-family: inherit
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 9px
+    label
+        span
+            font-family: boldoutline
+            margin: 0 5px
+.input-div
+    display: flex
+    align-items: center
+    width: 100%
+    height: 56px
+    padding: 0 30px
+    border-radius: 28px
+    background-color: #fff
+    margin-bottom: 20px
+    @include plus769()
+    > *
+        height: 100%
+    input, .span-dash
+        font-family: inherit
+        display: flex
+        flex: 1
+    &.input-div-two-inside
+        display: grid !important
+        grid-template-columns: auto 1fr 1fr 50%
+        grid-template-rows: 100%
+        flex: unset
+        input
+            max-width: 95px
+            &:last-of-type
+                
+.span-dash
+    font-family: boldoutline !important
+    display: flex
+    align-items: center
+    flex: unset !important
+    position: relative
+    margin: 0 20px 
+    justify-self: flex-start
+
+input, .login-button
+    background-color: none
+    outline: none
+    border: none
+
+
+.input-div-logo
+    margin-right: 20px
+    display: flex
+    align-items: center
+    max-width: fit-content
+    svg
+        width: 24px
+
+.login-button
+    height: 56px
+    border-radius: 28px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    background-color: $lightpurpleless
+    cursor: pointer
+    &:hover, &:active
+        background-color: $lightpurple
+    &.login-login, &.login-reg
+        margin-top: 20px
+        margin-bottom: 30px
+    &.login-fb
+        background-color: #34BDE7
+        &:hover, &:active            
+            background-color: #178FF2
+        span
+            font-family: boldoutline
+            margin: 0 3px 0 5px
+
+
+.login-password-recovery    
+    display: inline
+    margin: 0 auto !important
+    margin-bottom: 60px !important
+    text-align: center
+    width: fit-content
+    
+
+
+
+//  profile.html    
+.profile-button
+    @extend .login-button
+    @include plus1025()
+        width: 260px
+
+.profile-form-combiner form
+    @extend .form
+    padding: 0 !important
+    padding-bottom: 41px !important
+    &:not(:last-child)
+        padding-top: 50px !important
+        @include plus1025()
+            margin-bottom: 78px
+    @include plus1025()
+        max-width: unset
+        padding: 0 !important
+
+.profile-input-div
+    @extend .input-div
+    @include plus1025()
+        width: 260px
+        margin-bottom: 0
+    &.input-div-two-inside
+        @include plus1025()
+            grid-template-columns: auto 30% 1fr 30%
+
+.label-input-div
+    &:not(:last-child)
+        margin-right: 15px
+
+.label-input-combiner
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+.profile-container
+    padding: 
+
+.personal-info-container
+    @include plus1025()
+        display: grid
+        grid-template-columns: 63% 37%
+        width: 100%
+        padding: 90px 140px 
+    @include plus1441()
+        padding: 90px 140px 
+        padding-left: 278px
+.personal-info-decoration
+    display: none
+    @include plus1025()
+        display: unset
+    img
+        width: 100%
+        object-fit: cover
+.profile-container
+    .input-text
+        width: 100%
+
+
+// order history
+
+.orders-history-ul
+    display: grid
+    grid-auto-rows: 240px
+    grid-row-gap: 20px
+    @include plus769()
+        grid-auto-rows: 220px
+        grid-row-gap: 25px
+    li
+        width: calc( 100% - 30px )
+        max-width: 812px
+        margin: 0 auto
+        padding: 10px
+        height: 160px
+        background-color: #fff
+        border-radius: 12px
+        display: flex
+        position: relative
+        box-shadow: 0px 22px 16px -14px #5e5c5c9b
+        @include plus769()
+            box-shadow: none
+            width: 100%
+            height: 220px
+            padding: 40px
+            padding-right: 30px
+
+
+.orders-history-li-number
+    width: 40px
+    height: 40px
+    background-color: #C4B3FA
+    font-family: boldoutline
+    font-size: 22px
+    line-height: 27px
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    align-self: center
+    position: absolute
+    left: -10px
+    top: -10px
+    border-top-left-radius: 12px
+    @include plus769()
+        font-size: 32px
+        line-height: 39px
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        position: static
+        margin-right: 40px
+
+.orders-history-li-image
+    height: 100%
+    border-radius: 12px
+    width: 112px
+    overflow: hidden
+    margin-right: 20px
+    @include plus769()
+        margin-right: 40px
+        width: 122px
+    img
+        height: 100%
+        width: 100%
+        object-fit: cover
+
+.orders-history-li-right-container
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: stretch
+    > div
+        display: flex
+.date-id
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include plus769()
+        flex: 1
+
+.orders-history-li-id
+    margin-right: 0 !important
+.orders-history-li-right-container-nameDateId
+    display: flex
+    flex-direction: column
+    height: 95px
+    justify-content: center
+    
+    
+    @include plus769()
+        flex-direction: row
+        align-items: center
+    h1
+        font-family: boldoutline
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 30px
+        @include plus769()
+            margin-bottom: unset
+    p
+        font-family: rmn
+        font-size: 14px
+        line-height: 17px
+        &:last-child
+            color: #CCCCCC
+    @include plus769()
+        margin-bottom: 15px
+        h1
+            margin-right: 15px
+        p
+            margin-right: 30px
+.orders-history-li-right-container-priceAmount
+    justify-content: space-between
+    align-items:  flex-end
+    position: absolute
+    right: 25px
+    bottom: -80px
+    width: calc( 100% - 50px )
+    height: 90px
+    padding: 10px 10px 20px 20px
+    background-color: #fff
+    z-index: -1
+    border-radius: 12px
+    border-top-left-radius: 0
+    border-top-right-radius: 0 
+    @include plus769()
+        padding: 0
+        z-index: unset
+        align-items: center
+        border-radius: 0
+        width: unset
+        position: static
+        height: unset
+
+
+.orders-history-li-date
+    font-size: 14px
+    line-height: 17px
+.ho-hr
+    height: 25px
+    width: 1px
+    background-color: #CCCCCC
+    border-radius: 12px
+    align-self: center
+    display: none
+    @include plus769()
+        display: block
+
+.priceAmount-name
+    font-family: bld
+    font-size: 11px
+    line-height: 14px
+    margin-bottom: 6px
+    white-space: nowrap
+    color: #CCCCCC
+    @include plus1025()
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 4px
+.priceAmount-amount
+    font-family: boldoutline
+    font-size: 16px
+    line-height: 20px
+    @include plus769()
+        font-size: 22px
+        line-height: 27px
+    span
+        margin-left: 5px
