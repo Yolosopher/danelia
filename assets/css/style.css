@@ -1122,19 +1122,85 @@ address {
 
 .login-menu-slider a {
   display: block;
+  cursor: pointer;
 }
 
-.login-form {
-  min-height: calc( 100vh - 524px);
+.login-menu-slider li {
+  opacity: .6;
+}
+
+.login-menu-slider li.login {
+  opacity: 1;
+}
+
+.login-menu-slider ~ .form-combiner .login-form {
+  max-height: unset;
+}
+
+.login-menu-slider ~ .form-combiner .register-form {
+  -webkit-transform: translateX(500%);
+          transform: translateX(500%);
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-transition: all .3s, padding-bottom 0s, padding-top 0s;
+  transition: all .3s, padding-bottom 0s, padding-top 0s;
+}
+
+.login-menu-slider.register ~ .form-combiner .login-form {
+  -webkit-transform: translateX(-500%);
+          transform: translateX(-500%);
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.login-menu-slider.register ~ .form-combiner .register-form {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  max-height: unset;
+  padding: 90px 0;
+  -webkit-transition: all .3s, padding 0s;
+  transition: all .3s, padding 0s;
+}
+
+.login-menu-slider.register li.login {
+  opacity: .6;
+}
+
+.login-menu-slider.register li.registration {
+  opacity: 1;
+}
+
+.form-combiner {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.login-main {
+  min-height: calc( 100vh - 444px);
 }
 
 @media screen and (min-width: 769px) {
-  .login-form {
-    min-height: calc( 100vh - 429px);
+  .login-main {
+    min-height: calc( 100vh - 349px);
   }
 }
 
-.login-form {
+form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form {
+  overflow: hidden !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,19 +1213,26 @@ address {
   max-width: 403px;
   padding: 90px 0;
   margin: 0 auto;
+  max-height: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 769px) {
-  .login-form {
+  .form {
     width: 100%;
   }
 }
 
-.login-form label, .login-form a, .login-form .login-button {
+.form label, .form a, .form .login-button {
   font-family: inherit;
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 9px;
+}
+
+.form label span {
+  margin: 0 5px;
 }
 
 .input-div {
@@ -1181,11 +1254,45 @@ address {
   height: 100%;
 }
 
-.input-div input {
-  font-family: boldoutline;
+.input-div input, .input-div .span-dash {
+  font-family: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.input-div.input-div-two-inside {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: auto 1fr 1fr 50%;
+      grid-template-columns: auto 1fr 1fr 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+}
+
+.input-div.input-div-two-inside input {
+  max-width: 95px;
+}
+
+.span-dash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: unset !important;
+      -ms-flex: unset !important;
+          flex: unset !important;
+  position: relative;
+  margin: 0 20px;
+  justify-self: flex-start;
 }
 
 input, .login-button {
@@ -1202,6 +1309,13 @@ input, .login-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.input-div-logo svg {
+  width: 24px;
 }
 
 .login-button {
@@ -1219,7 +1333,7 @@ input, .login-button {
   color: #fff;
 }
 
-.login-button.login-login {
+.login-button.login-login, .login-button.login-reg {
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: #C4B3FA;

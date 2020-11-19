@@ -24,19 +24,59 @@
         align-items: center
         height: 100%
         width: 100%
+
     a
-        display: block          
+        display: block   
+        cursor: pointer  
+    li
+        opacity: .6 
+        &.login
+            opacity: 1  
+    ~ .form-combiner .login-form
+        max-height: unset
+    ~ .form-combiner .register-form
+        transform: translateX(500%)
+        max-height: 0
+        padding-top: 0
+        padding-bottom: 0
+        transition: all .3s, padding-bottom 0s, padding-top 0s
+    &.register
+        ~ .form-combiner .login-form
+            transform: translateX(-500%)
+            max-height: 0 
+            padding-top: 0
+            padding-bottom: 0
+        ~ .form-combiner .register-form
+            transform: translateX(0)
+            max-height: unset
+            padding: 90px 0
+            transition: all .3s, padding 0s
+        li.login
+            opacity: .6
+        li.registration
+            opacity: 1
+
 
 
 
 // login form height
-.login-form
-    min-height: calc( 100vh - 524px )
+.form-combiner
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    width: 100%
+
+.login-main
+    min-height: calc( 100vh - 444px )
     @include plus769()
-        min-height: calc( 100vh - 429px )
+        min-height: calc( 100vh - 349px )
+
 
 // login-form
-.login-form
+form
+    box-sizing: border-box
+.form
+    overflow: hidden !important
     display: flex
     flex-direction: column
     font-family: bld
@@ -44,6 +84,8 @@
     max-width: 403px
     padding: 90px 0
     margin: 0 auto
+    max-height: 0
+    transform: translateX(0)
     @include plus769()
         width: 100%
     label, a, .login-button
@@ -51,6 +93,10 @@
         font-size: 14px
         line-height: 17px
         margin-bottom: 9px
+    label
+        span
+            // font-family: boldoutline
+            margin: 0 5px
 .input-div
     display: flex
     align-items: center
@@ -63,9 +109,26 @@
     @include plus769()
     > *
         height: 100%
-    input
-        font-family: boldoutline
+    input, .span-dash
+        font-family: inherit
+        display: flex
         flex: 1
+    &.input-div-two-inside
+        display: grid !important
+        grid-template-columns: auto 1fr 1fr 50%
+        grid-template-rows: 100%
+        flex: unset
+        input
+            max-width: 95px
+            &:last-of-type
+                
+.span-dash
+    display: flex
+    align-items: center
+    flex: unset !important
+    position: relative
+    margin: 0 20px 
+    justify-self: flex-start
 
 input, .login-button
     background-color: none
@@ -77,6 +140,9 @@ input, .login-button
     margin-right: 20px
     display: flex
     align-items: center
+    max-width: fit-content
+    svg
+        width: 24px
 
 .login-button
     height: 56px
@@ -85,7 +151,7 @@ input, .login-button
     justify-content: center
     align-items: center
     color: #fff
-    &.login-login
+    &.login-login, &.login-reg
         margin-top: 20px
         margin-bottom: 30px
         background-color: $lightpurple

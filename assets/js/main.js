@@ -12,30 +12,11 @@ let a = [];
 
 
 
-// functions
-const loginMenuSlider = () => {
-	let windowWidth = window.innerWidth;
-	if (windowWidth < 769) {
-		loginMenuSwiper = new Swiper(".login-menu-slider", {
-			slidesPerView: 'auto',
-			direction: "horizontal",
-			breakpoints: {
-				0: {
-					spaceBetween: 25
-				},
-				769: {
-					spaceBetween: 35
-				}
-			}
-		});
-	}
-}
-
-
 // event listeners
 burger.addEventListener("click", () => {
 	burger.classList.toggle("active");
 });
+
 
 // load
 window.addEventListener("load", () => {
@@ -72,7 +53,6 @@ window.addEventListener("load", () => {
 			element.elem.style.backgroundColor = element.color;
 		});
 	});
-	loginMenuSlider();
 });
 
 // swipers
@@ -85,4 +65,3 @@ let homeSwiper = new Swiper(".home-insta-slider", {
     loop: true,
     direction: "horizontal",
 });
-let loginMenuSwiper;
