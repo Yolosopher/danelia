@@ -10,7 +10,27 @@ if (document.querySelector('.home-main')) {
 const homeMainImages = document.querySelectorAll(".article-right-imgdiv");
 let a = [];
 
+
+
 // functions
+const loginMenuSlider = () => {
+	let windowWidth = window.innerWidth;
+	if (windowWidth < 769) {
+		loginMenuSwiper = new Swiper(".login-menu-slider", {
+			slidesPerView: 'auto',
+			direction: "horizontal",
+			breakpoints: {
+				0: {
+					spaceBetween: 25
+				},
+				769: {
+					spaceBetween: 35
+				}
+			}
+		});
+	}
+}
+
 
 // event listeners
 burger.addEventListener("click", () => {
@@ -52,10 +72,11 @@ window.addEventListener("load", () => {
 			element.elem.style.backgroundColor = element.color;
 		});
 	});
+	loginMenuSlider();
 });
 
 // swipers
-let homeSwiper = new Swiper(".swiper-container", {
+let homeSwiper = new Swiper(".home-insta-slider", {
     slidesPerView: 'auto',
     autoplay: {
         delay: 2500,
@@ -64,3 +85,4 @@ let homeSwiper = new Swiper(".swiper-container", {
     loop: true,
     direction: "horizontal",
 });
+let loginMenuSwiper;

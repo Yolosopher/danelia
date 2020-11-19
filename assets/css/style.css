@@ -79,20 +79,21 @@ div.default-ul ul li {
 
 body {
   color: #171717;
+  background-color: #FBFBFF;
 }
 
-header, footer {
+header, footer, .login-menu-slider {
   padding: 0 10px !important;
 }
 
 @media screen and (min-width: 900px) {
-  header, footer {
+  header, footer, .login-menu-slider {
     padding: 0 50px !important;
   }
 }
 
 @media screen and (min-width: 1441px) {
-  header, footer {
+  header, footer, .login-menu-slider {
     padding: 0 140px !important;
   }
 }
@@ -114,6 +115,7 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 769px) {
@@ -390,6 +392,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 769px) {
@@ -636,8 +639,17 @@ footer {
   font-size: 22px;
   line-height: 27px;
   position: absolute;
-  top: 27px;
-  left: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 15px;
+  height: 86px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 769px) {
@@ -671,6 +683,7 @@ footer {
 
 @media screen and (min-width: 769px) {
   .home-aboutus-textbox-inner, .aboutus-main > div:last-child {
+    background-color: none;
     margin: 0;
     padding: 0;
     width: unset;
@@ -793,7 +806,7 @@ footer {
   left: 0;
   width: 100%;
   z-index: 3;
-  background-color: #fff;
+  background-color: #FAFAFA;
   height: 86px;
   padding: 0 7.25vw;
   font-family: boldoutline;
@@ -823,6 +836,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: none;
   }
 }
 
@@ -878,7 +892,7 @@ footer {
 
 .aboutus-main > div:last-child {
   margin-top: -60px;
-  background-color: #fff;
+  background-color: #FBFBFF;
   position: relative;
   border-radius: 30px 30px 0 0px;
 }
@@ -911,14 +925,12 @@ footer {
           transform: translateY(-40px);
   border-radius: 30px 30px 0 0px;
   background-color: #fff;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 1025px) {
   .aboutus-main-article-outter {
-    padding-top: 67px;
-    padding-right: 88px;
-    padding-left: 88px;
+    padding-top: 10px;
   }
 }
 
@@ -939,6 +951,23 @@ footer {
   font-family: lght;
   font: 14px;
   line-height: 22px;
+}
+
+.aboutus-main-article {
+  background-color: #FBFBFF;
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 769px) {
+  .aboutus-main-article {
+    width: 100%;
+    height: 100%;
+    padding-top: 57px;
+    padding-right: 88px;
+    padding-left: 88px;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .rules-cover {
@@ -1068,5 +1097,150 @@ address {
 .contact-right-socials li a {
   height: 100%;
   display: inline-block;
+}
+
+.login-menu-slider {
+  height: 80px;
+  width: 100%;
+  background-color: #171717;
+  color: #fff;
+  font-family: bld;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.login-menu-slider ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-menu-slider a {
+  display: block;
+}
+
+.login-form {
+  min-height: calc( 100vh - 524px);
+}
+
+@media screen and (min-width: 769px) {
+  .login-form {
+    min-height: calc( 100vh - 429px);
+  }
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: bld;
+  width: calc( 100% - 60px);
+  max-width: 403px;
+  padding: 90px 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  .login-form {
+    width: 100%;
+  }
+}
+
+.login-form label, .login-form a, .login-form .login-button {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 9px;
+}
+
+.input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 0 30px;
+  border-radius: 28px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.input-div > * {
+  height: 100%;
+}
+
+.input-div input {
+  font-family: boldoutline;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+input, .login-button {
+  background-color: none;
+  outline: none;
+  border: none;
+}
+
+.input-div-logo {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-button {
+  height: 56px;
+  border-radius: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.login-button.login-login {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #C4B3FA;
+}
+
+.login-button.login-fb {
+  background-color: #178FF2;
+}
+
+.login-button.login-fb span {
+  font-family: boldoutline;
+  margin: 0 3px 0 5px;
+}
+
+.login-password-recovery {
+  display: inline;
+  margin: 0 auto !important;
+  margin-bottom: 60px !important;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 /*# sourceMappingURL=style.css.map */

@@ -97,8 +97,13 @@
         font-size: 22px
         line-height: 27px
         position: absolute
-        top: 27px
-        left: 15px
+        top: 0
+        left: 0
+        width: 100%
+        padding-left: 15px
+        height: 86px
+        display: flex
+        align-items: center
         @include plus769()
             position: static
             margin-bottom: 50px
@@ -116,6 +121,7 @@
     margin: 0 auto
     margin-top: -46px
     @include plus769()
+        background-color: none
         margin: 0
         padding: 0
         width: unset
@@ -193,7 +199,7 @@
     left: 0
     width: 100%
     z-index: 3
-    background-color: #fff
+    background-color: $fawhite
     height: 86px
     padding: 0 7.25vw
     font-family: boldoutline
@@ -207,6 +213,7 @@
         align-items: unset
         justify-content: center
         flex-direction: column
+        background-color: none
     h2
         font-size: 22px
         line-height: 27px

@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="assets/images/logo-black.svg" type="image/x-icon" />
-		<title>მთავარი</title>
+		<link
+			rel="shortcut icon"
+			href="assets/images/logo-black.svg"
+			type="image/x-icon"
+		/>
+		<title>ავტორიზაცია</title>
 		<meta name="theme-color" content="{{mobile-chrome-color}}" />
 		<meta property="og:title" content="csr" />
 		<meta property="og:type" content="website" />
@@ -161,145 +165,114 @@
 		</header>
 
 		<!-- main -->
-		<main class="home-main">
-			<section class="home-main-section">
-				<article data-color="#34BDE7">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
+		<main class="login-main">
+			<div class="login-menu-slider swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="login swiper-slide">
+						<a href="javascript:void(0)">ავტორიზაცია</a>
+					</li>
+					<li class="registration swiper-slide">
+						<a href="javascript:void(0)">რეგისტრაცია</a>
+					</li>
+				</ul>
+			</div>
+			<form class="login-form" id="login-form">
+				<label for="login-email">ელ. ფოსტა</label>
+				<div class="input-div">
+					<div class="input-div-logo">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+						>
+							<g
+								id="Group_142"
+								data-name="Group 142"
+								transform="translate(-790 -421)"
+							>
+								<rect
+									id="Rectangle_211"
+									data-name="Rectangle 211"
+									width="24"
+									height="24"
+									transform="translate(790 421)"
+									fill="rgba(255,255,255,0)"
+								/>
+								<path
+									id="Message"
+									d="M16.525,3H7.456A5.533,5.533,0,0,0,2,8.859v6.282A5.533,5.533,0,0,0,7.456,21h9.061a5.522,5.522,0,0,0,4-1.773A5.6,5.6,0,0,0,21.989,15.1V8.859A5.557,5.557,0,0,0,16.525,3ZM7.456,4.528h9.052A4,4,0,0,1,19.4,5.816a4.064,4.064,0,0,1,1.072,3v6.327A4.1,4.1,0,0,1,19.4,18.184a4,4,0,0,1-2.894,1.287H7.456a4.018,4.018,0,0,1-3.939-4.331V8.859A4.018,4.018,0,0,1,7.456,4.528Zm10.568,4.11a.755.755,0,0,0-1.066-.119l-4.1,3.3-.118.083a1.379,1.379,0,0,1-1.581-.089l-4.129-3.3-.093-.064a.755.755,0,0,0-.973.187.768.768,0,0,0,.123,1.074l4.134,3.3.161.118a2.889,2.889,0,0,0,3.416-.114l4.107-3.311.082-.077A.768.768,0,0,0,18.024,8.638Z"
+									transform="translate(790 421)"
+									fill="#171717"
+									fill-rule="evenodd"
+								/>
+							</g>
+						</svg>
 					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/blueImage.png" alt="">
-						</div>
+					<input
+						class="input input-email"
+						type="email"
+						name="login-email"
+                        id="login-email"
+                        placeholder="example@gmail.com"
+                        autofocus
+                        required
+					/>
+				</div>
+				<label for="login-password">პაროლი</label>
+				<div class="input-div">
+					<div class="input-div-logo">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+						>
+							<g
+								id="Group_143"
+								data-name="Group 143"
+								transform="translate(-792 -530)"
+							>
+								<rect
+									id="Rectangle_212"
+									data-name="Rectangle 212"
+									width="24"
+									height="24"
+									transform="translate(792 530)"
+									fill="rgba(255,255,255,0)"
+								/>
+								<path
+									id="Lock"
+									d="M12.01,2a5.35,5.35,0,0,1,5.384,5.083l0,.218V8.877a4.55,4.55,0,0,1,3.1,4.292v4.289A4.58,4.58,0,0,1,15.884,22H8.117A4.579,4.579,0,0,1,3.5,17.458V13.168A4.55,4.55,0,0,1,6.6,8.876v-1.6A5.344,5.344,0,0,1,12.01,2Zm3.863,5.3V8.627H8.127V7.281l.006-.2a3.876,3.876,0,0,1,7.74.215Zm.01,2.826H8.117a3.067,3.067,0,0,0-3.092,3.042v4.289A3.067,3.067,0,0,0,8.117,20.5h7.767a3.067,3.067,0,0,0,3.092-3.042V13.168A3.067,3.067,0,0,0,15.884,10.127ZM12.756,14.1a.763.763,0,0,0-1.518.1v2.221l.007.1a.763.763,0,0,0,1.518-.1V14.2Z"
+									transform="translate(792 530)"
+									fill="#200e32"
+									fill-rule="evenodd"
+								/>
+							</g>
+						</svg>
 					</div>
-				</article>
-				<article data-color="#EA433D">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
-					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/redImage.png" alt="">
-						</div>
-					</div>
-				</article>
-				<article data-color="#FEA6D4">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv default-ul">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
-					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/pinkImage.png" alt="">
-						</div>
-					</div>
-				</article>
-				<article data-color="#C4B3FA">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
-					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/purpleImage.png" alt="">
-						</div>
-					</div>
-				</article>
-				<article data-color="#19A97A">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
-					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/greenImage.png" alt="">
-						</div>
-					</div>
-				</article>
-				<article data-color="#FEB42B">
-					<div class="article-left">					
-						<h1>Baby Blue</h1>
-						<div class="article-textdiv">
-							<p>
-								ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
-							</p>
-						</div>
-						<a href="productin.html">პროდუქტის ნახვა</a>
-					</div>
-					<div class="article-right">
-						<div class="article-right-imgdiv">
-							<img src="assets/images/main-box-images/yellowImage.png" alt="">
-						</div>
-					</div>
-				</article>
-			</section>
+					<input
+						class="input input-password"
+						type="password"
+						name="login-password"
+                        id="login-password"
+                        placeholder="pass****"
+                        required
+					/>
+				</div>
+				<input
+					class="login-button login-login"
+					type="submit"
+					value="ავტორიზაცია"
+				/>
+				<a class="login-password-recovery" href="recovery.html"
+					>პაროლის აღდგენა</a
+				>
+				<button class="login-button login-fb">
+					ავტორიზაცია<span>facebook</span>-ით
+				</button>
+			</form>
 		</main>
-		<!-- aboutus -->
-		<article class="home-aboutus">
-			<div class="home-aboutus-imgdiv">
-				<img src="assets/images/main-box-images/aboutusImage.png" alt="about-us-image">
-			</div>
-			<div class="home-aboutus-textbox">
-				<div class="home-aboutus-textbox-inner">
-					<h2>ჩვენ შესახებ</h2>
-					<div class="home-aboutus-textdiv default-ul">
-						<p>
-							ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია.
-						</p>
-					</div>
-					<a class="home-aboutus-textbox-a" href="aboutus.html">სრულად ნახვა</a>
-				</div>
-			</div>
-		</article>
-		<!-- insta + slider -->
-		<div class="home-instaAndSlider">		
-			<article class="home-insta-article">
-				<h2><a href="https://www.instagram.com/" target="_blank">instagram</a></h2>
-				<div class="home-insta-article-textdiv default-ul">
-					<p>
-						ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია.
-					</p>
-				</div>
-				<p class="home-insta-article-p">#squad</p>
-			</article>
-			<div class="home-insta-slider swiper-container">
-				<div class="swiper-wrapper">
-					<img src="assets/images/home-slider-images/1.png" alt="slider-image" class="swiper-slide">
-					<img src="assets/images/home-slider-images/2.png" alt="slider-image" class="swiper-slide">
-					<img src="assets/images/home-slider-images/3.png" alt="slider-image" class="swiper-slide">
-					<img src="assets/images/home-slider-images/4.png" alt="slider-image" class="swiper-slide">
-					<img src="assets/images/home-slider-images/3.png" alt="slider-image" class="swiper-slide">
-					<img src="assets/images/home-slider-images/4.png" alt="slider-image" class="swiper-slide">
-				</div>
-			</div>	
-		</div>
 
 		<!-- footer -->
 		<footer>

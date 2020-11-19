@@ -10,6 +10,96 @@
 @import aboutus
 
 
+// login menu slider
+.login-menu-slider
+    height: 80px
+    width: 100%
+    background-color: $blackFont
+    color: #fff
+    font-family: bld
+    font-size: 16px
+    line-height: 20px
+    ul
+        display: flex
+        align-items: center
+        height: 100%
+        width: 100%
+    a
+        display: block          
 
-                
-            
+
+
+// login form height
+.login-form
+    min-height: calc( 100vh - 524px )
+    @include plus769()
+        min-height: calc( 100vh - 429px )
+
+// login-form
+.login-form
+    display: flex
+    flex-direction: column
+    font-family: bld
+    width: calc( 100% - 60px )
+    max-width: 403px
+    padding: 90px 0
+    margin: 0 auto
+    @include plus769()
+        width: 100%
+    label, a, .login-button
+        font-family: inherit
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 9px
+.input-div
+    display: flex
+    align-items: center
+    width: 100%
+    height: 56px
+    padding: 0 30px
+    border-radius: 28px
+    background-color: #fff
+    margin-bottom: 20px
+    @include plus769()
+    > *
+        height: 100%
+    input
+        font-family: boldoutline
+        flex: 1
+
+input, .login-button
+    background-color: none
+    outline: none
+    border: none
+
+
+.input-div-logo
+    margin-right: 20px
+    display: flex
+    align-items: center
+
+.login-button
+    height: 56px
+    border-radius: 28px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    &.login-login
+        margin-top: 20px
+        margin-bottom: 30px
+        background-color: $lightpurple
+    &.login-fb
+        background-color: #178FF2
+        span
+            font-family: boldoutline
+            margin: 0 3px 0 5px
+
+
+.login-password-recovery    
+    display: inline
+    margin: 0 auto !important
+    margin-bottom: 60px !important
+    text-align: center
+    width: fit-content
+    
