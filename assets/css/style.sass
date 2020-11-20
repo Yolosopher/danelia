@@ -10,3 +10,86 @@
 @import aboutus
 @import login-profile
 
+
+// productin
+.productin-main
+    width: 100%
+    padding: 0 15px
+    @include plus1025()
+        padding: 60px 140px 90px
+    @include plus1441()
+        padding: 90px 278px 130px
+//     .swiper-slide
+//         // flex: 1
+
+.productin-gallery-slider
+    display: flex
+//     flex-direction: column
+//     @include plus769()
+//         flex-direction: row
+//     .swiper-container
+//         overflow: hidden
+//         max-height: 674px
+//     img
+//         border-radius: 12px
+//         object-fit: cover
+//         cursor: pointer
+
+        
+// .thumbsSlider
+//     width: calc( 100% - 30px )
+//     height: 100%
+//     @include plus769()
+//         margin-right: 16px
+//         width: 122px
+//     .swiper-wrapper
+//         display: flex
+//         height: 100%
+//         @include plus769()
+//             flex-direction: column   
+//         img
+//             height: 221px
+//             width: 65%
+//             @include plus769()
+//                 height: 150px
+//     .swiper-slide
+//         padding-bottom: 70px
+//         opacity: .7
+//         &.swiper-slide-active
+//             padding: 0
+//             opacity: 1
+//         @include plus769()
+//             padding: 0 !important
+
+// .mainPhotoSlider 
+//     display: flex   
+//     overflow: hidden
+//     max-width: 674px   
+//     max-height: 674px
+//     @include plus769()
+//         width: 100% 
+//         height: 100%
+//     .swiper-wrapper
+//         display: flex
+//         flex-direction: column        
+
+
+
+.productin-main
+    .swiper-container, .swiper-wrapper
+        position: relative !important
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.productin-gallery-slider
+    height: 60vh !important
+    max-height: 674px !important
+    .swiper-container, .swiper-wrapper
+        height: 100%
+
+.mainPhotoSlider
+    width: 674px
+.thumbsSlider 
+    width: 122px
