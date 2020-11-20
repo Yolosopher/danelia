@@ -63,31 +63,31 @@ let homeSwiper = new Swiper(".home-insta-slider", {
 	direction: "horizontal",
 });
 
-// productin gallery slider
-var thumbsSlider = new Swiper(".thumbsSlider", {
-	slidesPerView: "auto",
-	keyboard: true,
-	direction: "vertical",
-	spaceBetween: 35,
-	clickable: true,
-	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
-	navigation: {
-		nextEl: ".hidden-next",
-		prevEl: ".hidden-prev",
-	},
-});
-var mainPhotoSlider = new Swiper(".mainPhotoSlider", {
-	thumbs: {
-		swiper: thumbsSlider,
-	},
-	direction: "vertical",
-	navigation: {
-		nextEl: ".hidden-next",
-		prevEl: ".hidden-prev",
-	},
-	grabCursor: true,
-});
+// // productin gallery slider
+// var thumbsSlider = new Swiper(".thumbsSlider", {
+// 	slidesPerView: "auto",
+// 	keyboard: true,
+// 	direction: "vertical",
+// 	spaceBetween: 35,
+// 	clickable: true,
+// 	watchSlidesVisibility: true,
+// 	watchSlidesProgress: true,
+// 	navigation: {
+// 		nextEl: ".hidden-next",
+// 		prevEl: ".hidden-prev",
+// 	},
+// });
+// var mainPhotoSlider = new Swiper(".mainPhotoSlider", {
+// 	thumbs: {
+// 		swiper: thumbsSlider,
+// 	},
+// 	direction: "vertical",
+// 	navigation: {
+// 		nextEl: ".hidden-next",
+// 		prevEl: ".hidden-prev",
+// 	},
+// 	grabCursor: true,
+// });
 
 // $('.productin-main .swiper-slide').on('click', function() {
 //     // console.log($(this).index());
