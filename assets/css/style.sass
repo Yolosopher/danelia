@@ -10,4 +10,150 @@
 @import aboutus
 @import login-profile
 
+// productin
+.productin-main
+    width: 100%
+    padding: 0 15px
+    @include plus1025()
+        display: grid
+        grid-template-columns: 60% auto
+        max-width: 90%
+        margin: 30px auto 40px
+        grid-gap: 30px
+    @include plus1441()
+        margin: 90px auto 130px
+        max-width: 1394px
+        grid-gap: 154px
 
+.productin-gallery-slider-combiner
+    @include plus769()
+        display: flex
+        width: 60%
+    @include plus1025()
+        // flex: 1
+        width: unset
+        display: grid
+        grid-template-columns: 10fr 90fr
+        height: calc( 100vh - 190px )
+    @include plus1441()
+        height: calc( 100vh - 250px )
+
+
+        
+.thumbsSlider
+    // margin: 0 auto
+    // height: 
+    display: flex
+    overflow: hidden
+    @include plus769()
+        // margin: 0
+        margin-right: 16px
+        height: 100%
+        @include plus1441()
+            width: 122px
+        
+    .swiper-wrapper
+        // height: 
+        @include plus769()
+            // height: 100%
+            width: 100%
+    .swiper-slide
+        // height: 150px
+        @include plus769()
+            height: 150px
+            width: 100%   
+            opacity: .4
+        &.swiper-slide-thumb-active
+            opacity: 1
+    img
+        border-radius: 12px     
+        object-fit: cover
+        cursor: pointer
+        height: 100%
+        @include plus769()
+            height: 100%
+            width: 100%
+
+.mainPhotoSlider
+    overflow: hidden    
+    img
+        border-radius: 12px     
+        object-fit: cover
+        cursor: pointer
+        height: 100%
+        @include plus769()
+            height: 100%
+            width: 100%
+
+
+// product-info-right
+.product-info-right
+    @include plus769()
+        width: 398px
+        justify-self: flex-end
+
+.hidden-select
+    display: none !important
+
+.product-info-prices
+    display: flex
+    align-items: flex-end
+.product-info-price
+    font-family: bld
+    font-size: 22px
+    line-height: 27px
+    span
+        margin-left: 3px
+.product-info-discount
+    font-family: thin
+    font-size: 14px
+    line-height: 16px
+    margin-bottom: 3px
+    margin-left: 2px
+    
+
+.product-info-form-sides
+    display: flex
+    justify-content: space-between
+    align-items: center
+    label
+        display: inline-block
+        margin-bottom: 15px
+    .ho-hr
+        height: 28px
+        background-color: $blackFont
+    .select-ul
+        display: grid
+        grid-template-columns: repeat(4, auto)
+        grid-gap: 30px
+        text-transform: uppercase
+        li
+            cursor: pointer
+            font-family: lght
+            font-size: 18px
+            line-height: 22px
+            &.active
+                font-family: bld
+
+.choose-quantity-quantity-div
+    display: flex
+    justify-content: space-between
+    input
+        cursor: pointer
+        font-family: bld
+        font-size: 18px
+        line-height: 22px
+.quantity-controls
+    display: flex
+    div
+        cursor: pointer
+        &:first-child
+            margin-right: 10px
+        &.disabled
+            #Rectangle_36, line
+                stroke: #CFCFCF
+.productin-submit
+    @extend .login-button
+    width: 100%
+    svg
+        margin-right: 15px

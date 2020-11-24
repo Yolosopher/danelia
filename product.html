@@ -167,79 +167,284 @@
 
 		<!-- main -->
 		<main class="productin-main">
-			<div class="productin-gallery-slider">
+			<!-- slider-combiner -->
+			<div class="productin-gallery-slider-combiner">
+				<!-- thumbs -->
 				<div class="thumbsSlider swiper-container">
 					<div class="swiper-wrapper">
-						<img
-							src="assets/images/order-images/1.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/2.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/3.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/1.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/2.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/3.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/1.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/2.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/3.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/1.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/2.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/3.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
 					</div>
 				</div>
-				<div class="mainPhotoSlider">
+				<!-- mainPhoto -->
+				<div class="mainPhotoSlider swiper-container">
 					<div class="swiper-wrapper">
-						<img
-							src="assets/images/order-images/1.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/2.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/3.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/1.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/2.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
-						<img
-							src="assets/images/order-images/3.png"
-							alt="mainPhotoSlider-image"
-							class="swiper-slide"
-						/>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/1.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/2.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/3.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/1.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/2.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="assets/images/order-images/3.png"
+								alt="mainPhotoSlider-image"
+							/>
+						</div>
 					</div>
 				</div>
-				<div class="swiper-hidden-btns">
-					<div class="hidden-prev"></div>
-					<div class="hidden-next"></div>
-				</div>
+			</div>
+			<!-- product-info -->
+			<div class="product-info-right">
+				<article class="product-info">
+					<h1>Notorious BIG V2 (Hoodie)</h1>
+					<div class="product-info-prices">
+						<p class="product-info-price">60.00<span>₾</span></p>
+						<p class="product-info-discount">60.00<span>₾</span></p>
+					</div>
+					<div class="product-info-textdiv">
+						<p>
+							ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს
+							შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის
+							აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით
+							ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების
+							ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია
+							ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს,
+							მისი წაითხვა კი შეუძლებელია.
+						</p>
+					</div>
+				</article>
+				<form class="product-info-form">
+					<div class="product-info-form-sides">
+						<div class="product-info-form-left">
+							<label for="choose-size">აირჩიე შენი ზომა</label>
+							<select
+								class="choose-size-select hidden-select"
+								name="choose-size"
+								id="choose-size"
+								required
+							>
+								<option selected disabled></option>
+								<option value="s"></option>
+								<option value="m"></option>
+								<option value="l"></option>
+								<option value="xl"></option>
+							</select>
+							<ul class="select-ul"></ul>
+						</div>
+						<div class="ho-hr"></div>
+						<div class="product-info-form-right">
+							<label for="choose-quantity"
+								>აირჩიე რაოდენობა</label
+							>
+							<div class="choose-quantity-quantity-div">
+								<input
+									type="number"
+									name="choose-quantity"
+									id="choose-quantity"
+									min="1"
+									max="100"
+									value="1"
+									required
+								/>
+								<div class="quantity-controls">
+									<div class="quantity-controls-minus disabled">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+										>
+											<g
+												id="Group_138"
+												data-name="Group 138"
+												transform="translate(-663 -805)"
+											>
+												<rect
+													id="Rectangle_35"
+													data-name="Rectangle 35"
+													width="24"
+													height="24"
+													transform="translate(663 805)"
+													fill="rgba(255,255,255,0)"
+												/>
+												<g
+													id="Group_6"
+													data-name="Group 6"
+												>
+													<g
+														id="Rectangle_36"
+														data-name="Rectangle 36"
+														transform="translate(665 807)"
+														fill="none"
+														stroke="#171717"
+														stroke-width="1.5"
+													>
+														<rect
+															width="20"
+															height="20"
+															rx="5"
+															stroke="none"
+														/>
+														<rect
+															x="0.75"
+															y="0.75"
+															width="18.5"
+															height="18.5"
+															rx="4.25"
+															fill="none"
+														/>
+													</g>
+													<line
+														id="Line_1"
+														data-name="Line 1"
+														x2="8"
+														transform="translate(671 817)"
+														fill="none"
+														stroke="#171717"
+														stroke-linecap="round"
+														stroke-width="1.5"
+													/>
+												</g>
+											</g>
+										</svg>
+									</div>
+									<div class="quantity-controls-plus">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+										>
+											<g
+												id="Group_137"
+												data-name="Group 137"
+												transform="translate(-630 -805)"
+											>
+												<rect
+													id="Rectangle_35"
+													data-name="Rectangle 35"
+													width="24"
+													height="24"
+													transform="translate(630 805)"
+													fill="rgba(255,255,255,0)"
+												/>
+												<path
+													id="Plus"
+													d="M16.359,2H7.641C4.256,2,2,4.42,2,7.893v8.214C2,19.583,4.25,22,7.641,22h8.718C19.75,22,22,19.583,22,16.107V7.893C22,4.417,19.75,2,16.359,2ZM7.641,3.4h8.718c2.6,0,4.246,1.771,4.246,4.5v8.214c0,2.727-1.648,4.5-4.246,4.5H7.641c-2.6,0-4.246-1.771-4.246-4.5V7.893C3.4,5.169,5.049,3.4,7.641,3.4ZM12,7.886a.7.7,0,0,1,.691.6l.006.095v2.71h2.713a.7.7,0,0,1,.095,1.389l-.095.006H12.7V15.4a.7.7,0,0,1-1.389.095L11.3,15.4v-2.71H8.589A.7.7,0,0,1,8.494,11.3l.095-.006H11.3V8.584A.7.7,0,0,1,12,7.886Z"
+													transform="translate(630 805)"
+													fill="#171717"
+													fill-rule="evenodd"
+												/>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="productin-submit" type="submit">
+						<svg
+							id="Component_2_41"
+							data-name="Component 2 – 41"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+						>
+							<rect
+								id="Rectangle_121"
+								data-name="Rectangle 121"
+								width="24"
+								height="24"
+								fill="rgba(255,255,255,0)"
+							/>
+							<g id="Bag" transform="translate(2.5 2)">
+								<path
+									id="Path_39"
+									data-name="Path 39"
+									d="M7.732,22.094H16.5c3.221,0,5.692-1.152,4.991-5.791l-.817-6.286c-.433-2.314-1.923-3.2-3.231-3.2H6.752c-1.327,0-2.731.952-3.231,3.2L2.7,16.3C2.107,20.418,4.511,22.094,7.732,22.094Z"
+									transform="translate(-2.612 -2.094)"
+									fill="none"
+									stroke="#fff"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+								/>
+								<path
+									id="Path_40"
+									data-name="Path 40"
+									d="M7.349,6.773a4.5,4.5,0,0,1,4.5-4.5h0a4.5,4.5,0,0,1,4.514,4.5h0m-7.6,4.686h.048m6.019,0h.048"
+									transform="translate(-2.33 -2.278)"
+									fill="none"
+									stroke="#fff"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+								/>
+							</g>
+						</svg>
+						ჩანთაში დამატება
+					</button>
+				</form>
 			</div>
 		</main>
 
@@ -458,5 +663,31 @@
 		<script src="assets/js/jquery-3.2.1.min.js"></script>
 		<script src="assets/js/swiper.min.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- js for productin -->
+		<script src="assets/js/niceSelectByMe.js"></script>
+		<script>
+			const chooseSize = document.getElementById("choose-size");
+			const selectUl = document.querySelector(".select-ul");
+
+			setNiceSelect(selectUl, chooseSize);
+
+			const minus = document.querySelector('.quantity-controls-minus');
+			const plus = document.querySelector('.quantity-controls-plus');
+
+			const quantityInput = document.getElementById('choose-quantity');
+
+			minus.addEventListener('click', () => {
+				let val = +quantityInput.value;
+				if (val > 1) quantityInput.value = val - 1;
+				if (val === 2) minus.classList.add('disabled');
+			})
+			plus.addEventListener('click', () => {
+				let val = +quantityInput.value;
+				if (val >= 1) minus.classList.remove('disabled');
+				quantityInput.value = val + 1;				
+			})
+
+		</script>
 	</body>
 </html>
