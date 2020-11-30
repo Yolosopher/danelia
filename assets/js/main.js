@@ -66,20 +66,34 @@ let homeSwiper = new Swiper(".home-insta-slider", {
 // productin gallery slider
 var thumbsSlider = new Swiper(".thumbsSlider", {
 	spaceBetween: 16,
-	slidesPerView: 4.1,
-	direction: "vertical",
-	scrollable: true,
+	slidesPerView: 1.5,
+	updateOnWindowResize: true,
+	direction: "horizontal",
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
+	centeredSlides: true,
 	mousewheel: true,
+	
+	breakpoints: {
+		1025: {
+			direction: "vertical",
+			slidesPerView: 4.1,
+			centeredSlides: false
+		}
+	},
 });
+
+
+
 var mainPhotoSlider = new Swiper(".mainPhotoSlider", {
-	slidesPerView: 1,
+	slidesPerView: 1.28,
 	spaceBetween: 10,
+	direction: "vertical",
+	slidesPerView: 1,
+	updateOnWindowResize: true,
 	thumbs: {
 		swiper: thumbsSlider,
 	},
-	direction: "vertical",
 	navigation: {
 		nextEl: ".hidden-next",
 		prevEl: ".hidden-prev",
@@ -89,6 +103,9 @@ var mainPhotoSlider = new Swiper(".mainPhotoSlider", {
 
 $(".productin-main .swiper-slide").on("click", function () {
 	ind = $(this).index();
-	console.log(ind);
+	$(this).parent().find('.swiper-slide').removeClass('active');
+	$(this).addClass('active');
 	thumbsSlider.slideTo(ind);
+	mainPhotoSlider.slideTo(ind);
 });
+

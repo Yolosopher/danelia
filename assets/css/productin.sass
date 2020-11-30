@@ -1,0 +1,214 @@
+// productin
+.productin-main
+    width: 100%
+    padding: 0 15px
+    display: grid
+    grid-template-columns: 100%
+    @include plus1025()
+        grid-template-columns: 60% auto
+        max-width: 90%
+        margin: 30px auto 40px
+        grid-gap: 30px
+    @include plus1441()
+        margin: 90px auto 130px
+        max-width: 1394px
+        grid-gap: 154px
+
+.productin-gallery-slider-combiner
+    width: 100%
+    height: 221px
+    margin-top: 50px
+    margin-bottom: 30px
+    @include plus769()
+        height: 350px
+    @include plus1025()
+        margin: 0
+        // flex: 1
+        width: unset
+        height: unset
+        display: grid
+        grid-template-columns: 10fr 90fr
+        height: calc( 100vh - 190px )
+    @include plus1441()
+        height: calc( 100vh - 250px )
+
+
+        
+.thumbsSlider
+    display: flex
+    overflow: hidden
+    height: 100%
+    @include plus1025()
+        margin-right: 16px
+        width: 122px
+        
+        
+    .swiper-wrapper
+        display: flex
+        height: 100%
+        @include plus1025()
+            display: unset
+            width: 100%
+    .swiper-slide
+        flex-shrink: 0
+        height: 100%
+        padding-bottom: 70px
+        padding-right: 135px
+        &.swiper-slide-active
+            padding: 0
+        @include plus1025()
+            height: 150px
+            width: 100%   
+            padding: 0 !important
+            opacity: .4
+            &.swiper-slide-thumb-active
+                opacity: 1
+    img
+        border-radius: 12px     
+        object-fit: cover
+        cursor: pointer
+        height: 100%
+        width: 100%
+        @include plus769()
+            height: 100%
+            width: 100%
+
+.mainPhotoSlider
+    overflow: hidden    
+    height: 100%
+    max-width: 0
+    max-height: 0
+    @include plus1025()
+        max-width: unset
+        max-height: unset
+    .swiper-wrapper
+        display: flex
+        height: 100%
+        @include plus1025()
+            display: block
+        > div 
+            width: 68vw
+            position: relative
+            flex-shrink: 0
+            @include plus1025()
+                width: 100%
+    .swiper-slide
+        padding-bottom: 70px
+        padding-right: 135px
+        @include plus1025()
+            padding: 0 !important
+        &.active
+            padding: 0
+        
+    img
+        border-radius: 12px     
+        object-fit: cover
+        cursor: pointer
+        height: 100%
+        width: 100%
+
+
+// product-info-right
+.product-info-right
+    @include plus769()
+        align-self: center
+        width: 398px
+        justify-self: center
+
+.hidden-select
+    display: none !important
+
+.product-info-prices
+    display: flex
+    align-items: flex-end
+    margin-bottom: 29px
+.product-info-price
+    font-family: bld
+    font-size: 22px
+    line-height: 27px
+    span
+        margin-left: 3px
+.product-info-discount
+    font-family: thin
+    font-size: 14px
+    line-height: 16px
+    margin-bottom: 3px
+    margin-left: 2px
+    
+
+.product-info-form-sides
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    @include plus1025()
+        margin-bottom: 40px
+    label
+        display: inline-block
+        font-family: bld
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 15px
+    .ho-hr
+        height: 28px
+        background-color: $blackFont
+    .select-ul
+        display: grid
+        grid-template-columns: repeat(4, auto)
+        grid-gap: 30px
+        text-transform: uppercase
+        li
+            cursor: pointer
+            font-family: lght
+            font-size: 18px
+            line-height: 22px
+            &.active
+                font-family: bld
+
+.choose-quantity-quantity-div
+    display: flex
+    justify-content: space-between
+    input
+        cursor: pointer
+        font-family: bld
+        font-size: 18px
+        line-height: 22px
+.quantity-controls
+    display: flex
+    div
+        cursor: pointer
+        &:first-child
+            margin-right: 10px
+        &.disabled
+            #Rectangle_36, line
+                stroke: #CFCFCF
+.productin-submit
+    @extend .login-button
+    width: 100%
+    margin-bottom: 50px
+    @include plus1025()
+        margin-bottom: 0
+    svg
+        margin-right: 15px
+
+.product-info
+    font-family: bld
+    h1
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 13px
+        @include plus1025()
+            margin-bottom: 27px
+            font-size: 32px
+            line-height: 38px
+            text-transform: uppercase
+    .product-info-textdiv
+        font-family: lght
+        font-size: 14px
+        line-height: 22px
+        margin-bottom: 29px
+        @include plus1025()
+            padding-bottom: 39px
+            border-bottom: 2px solid rgba($color: #CCCCCC, $alpha: .3)
+            border-radius: 2px

@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=variables.css.map */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -moz-appearance: textfield !important;
+}
+/*# sourceMappingURL=variables.css.map */
