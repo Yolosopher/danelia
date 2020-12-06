@@ -1,0 +1,72 @@
+@font-face 
+    font-family: thin
+    src: url(../fonts/HelveticaNeue-Thin.otf)
+
+
+
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 16px
+
+body
+    height: 100vh
+    background-color: #EA433D
+
+img
+    height: 54px
+    object-fit: contain
+    margin-bottom: 41px
+h1
+    font-family: thin
+    font-style: normal
+    font-variant: normal
+    font-feature-settings: normal
+    font-size: 2rem
+    text-transform: uppercase
+
+
+.three-boxes
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    height: 100%
+
+.box1
+    background-color: #C4B3FA
+    height: calc(512% / 812 * 100)
+.box2
+    background-color: #34BDE7
+    height: calc(612% / 812 * 100)
+.box3
+    background-color: #FEB42B
+    height: calc(712% / 812 * 100)
+.textdiv
+    display: flex
+    flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    z-index: 1
+    top: 50%
+    color: #fff
+    right: 50%
+    transform: translate(50%, -50%)
+
+
+@media screen and ( min-width: 768px )
+    img
+        height: 84px
+        margin-bottom: 43px
+    h1
+        font-size: 4rem
+    .box1
+        height: calc(751% / 1051 * 100)
+    .box2
+        height: calc(851% / 1051 * 100)
+    .box3
+        height: calc(951% / 1051 * 100)
