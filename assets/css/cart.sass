@@ -1,0 +1,81 @@
+// cart main
+.cart-main
+    display: flex
+    flex-direction: column
+
+
+.cart-main-content
+    align-self: center
+    max-width: 1088px
+    width: 100%
+    flex: 1   
+    padding: 0 15px
+    @include plus1025()
+        padding: 0
+.basket-info-header
+    display: grid
+    justify-items: center
+    margin-top: 47px
+    margin-bottom: 50px
+    grid-template-columns: auto auto
+    justify-content: space-between
+
+    @include plus1025()
+        align-items: center
+        grid-template-columns: 260px 1fr 260px
+        margin-top: 86px
+        margin-bottom: 73px
+    > * 
+        display: flex
+        flex-direction: column
+        align-items: center
+        > div
+            display: flex
+            margin-bottom: 15px
+            font-family: thin
+            font-feature-settings: 
+            font-size: 22px
+            line-height: 25px
+            text-transform: uppercase
+        a, p 
+            font-family: bld
+            font-size: 14px
+            line-height: 17px
+        a
+            color: $lightred
+        p
+            color: $lightpurpleless
+    input
+        background-color: transparent
+        display: flex
+        font-size: inherit
+        color: inherit
+        outline: none
+        width: 37px
+        text-align: center
+        margin: 0 4px
+        -webkit-writing-mode: horizontal-tb !important
+        text-rendering: inherit
+        text-transform: uppercase
+        text-align: center
+        -webkit-rtl-ordering: none
+        cursor: text
+        font-family: inherit
+.basket-info-header-left
+    input
+
+      
+
+.basket-info-header-right
+    width: 100%
+    grid-column: 1 / span 2
+    @include plus1025()
+        width: 260px
+
+.cart-button
+    @extend .login-button
+    width: 100%
+    margin-top: 30px
+    @include plus1025()        
+        margin-top: 0
+
