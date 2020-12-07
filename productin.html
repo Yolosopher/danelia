@@ -274,7 +274,7 @@
 						</p>
 					</div>
 				</article>
-				
+
 				<form class="product-info-form">
 					<div class="product-info-form-sides">
 						<div class="product-info-form-left">
@@ -309,7 +309,9 @@
 									required
 								/>
 								<div class="quantity-controls">
-									<div class="quantity-controls-minus disabled">
+									<div
+										class="quantity-controls-minus disabled"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -675,22 +677,21 @@
 
 			setNiceSelect(selectUl, chooseSize);
 
-			const minus = document.querySelector('.quantity-controls-minus');
-			const plus = document.querySelector('.quantity-controls-plus');
+			const minus = document.querySelector(".quantity-controls-minus");
+			const plus = document.querySelector(".quantity-controls-plus");
 
-			const quantityInput = document.getElementById('choose-quantity');
+			const quantityInput = document.getElementById("choose-quantity");
 
-			minus.addEventListener('click', () => {
+			minus.addEventListener("click", () => {
 				let val = +quantityInput.value;
 				if (val > 1) quantityInput.value = val - 1;
-				if (val === 2) minus.classList.add('disabled');
-			})
-			plus.addEventListener('click', () => {
+				if (val === 2) minus.classList.add("disabled");
+			});
+			plus.addEventListener("click", () => {
 				let val = +quantityInput.value;
-				if (val >= 1) minus.classList.remove('disabled');
-				quantityInput.value = val + 1;				
-			})
-
+				if (val >= 1) minus.classList.remove("disabled");
+				quantityInput.value = val + 1;
+			});
 		</script>
 	</body>
 </html>

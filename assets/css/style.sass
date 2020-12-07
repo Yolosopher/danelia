@@ -14,3 +14,239 @@
 @import input
 @import product
 
+// cart main 
+.cart-main
+    display: flex
+    flex-direction: column
+
+
+.cart-main-content
+    align-self: center
+    max-width: 1088px
+    width: 100%
+    flex: 1   
+    padding: 0 15px
+    margin-bottom: 50px
+    @include plus769()
+        padding: 0
+        margin-bottom: 130px
+
+// cart main header
+.basket-info-header
+    display: grid
+    justify-items: center
+    margin-top: 47px
+    margin-bottom: 50px
+    grid-template-columns: auto auto
+    justify-content: space-between
+
+    @include plus769()
+        align-items: center
+        grid-template-columns: 260px 1fr 260px
+        grid-template-rows: 75px
+        margin-top: 86px
+        margin-bottom: 73px
+    > * 
+        display: flex
+        flex-direction: column
+        align-items: center
+        > div
+            display: flex
+            margin-bottom: 15px
+            font-family: thin
+            font-feature-settings: 
+            font-size: 22px
+            line-height: 25px
+            text-transform: uppercase
+        a, p 
+            font-family: bld
+            font-size: 14px
+            line-height: 17px
+        a
+            color: $lightred
+        p
+            color: $lightpurpleless
+    input
+        background-color: transparent
+        display: flex
+        font-size: inherit
+        color: inherit
+        outline: none
+        width: 37px
+        text-align: center
+        margin: 0 4px
+        -webkit-writing-mode: horizontal-tb !important
+        text-rendering: inherit
+        text-transform: uppercase
+        text-align: center
+        -webkit-rtl-ordering: none
+        cursor: text
+        font-family: inherit
+.basket-info-header-left
+    input
+
+.basket-info-header-right
+    width: 100%
+    grid-column: 1 / span 2
+    @include plus769()
+        width: 260px
+        grid-column: unset
+
+.cart-button
+    @extend .login-button
+    width: 100%
+    margin-top: 30px
+    @include plus769()   
+        margin-top: 0
+
+// basket-items
+.basket-items-ul
+    .quantity-controls div #Rectangle_36, .quantity-controls div line
+        stroke: #fff
+    .quantity-controls div.disabled #Rectangle_36, .quantity-controls div.disabled line
+        stroke: #a1a1a1
+    .quantity-controls-plus
+        path
+            fill: #fff
+    .choose-quantity
+        color: #fff
+    .product-info-form
+        width: 100%
+.basket-items-ul
+    display: grid
+    grid-auto-rows: 346px
+    grid-template-columns: 100%
+    grid-gap: 40px
+    @include plus769()
+        grid-auto-rows: 300px
+    > li
+        position: relative
+        display: flex
+        justify-content: space-between
+        padding: 60px 0
+        padding-right: 55px
+        align-items: center
+        background-color:#C4B3FA
+        border-radius: 12px
+        color: #fff
+        height: 161px
+        @include plus769()
+            height: unset
+            padding: 28px
+            padding-left: calc( 350 / 1088 * 100% )
+            padding-right: 30px 
+        @include plus1025()
+            padding-left: calc( 414 / 1088 * 100% )
+
+        img
+            position: absolute
+            bottom: 0
+            left: -10px
+            height: 110%
+            align-self: flex-end            
+            object-fit: contain
+            @include plus769()
+                height: 80%
+            @include sizePlus(850px)            
+                height: 110%
+    h1
+        font-family: bld
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 18px
+        margin-bottom: 19px
+        @include plus769()
+            max-width: 213px
+            margin-bottom: 0
+            font-size: 22px
+            line-height: 25px
+    .ho-hr
+        @include plus769()
+            display: none
+    .product-info-form-sides
+        margin: 0
+        width: 100%
+    .choose-quantity-quantity-div input
+        background-color: unset
+    .product-info-form-left,
+    .product-info-form-right
+        align-self: stretch
+        max-width: 150px
+        width: 100%
+    .basket-items-ul li
+        padding: 0 !important
+
+.basket-items-li-center-top
+    display: flex
+    justify-content: space-between
+.basket-items-li-center-bottom
+    display: flex
+    width: 100%
+    justify-content: space-between
+    
+
+
+
+.prices-for-xs
+    display: flex
+    flex-direction: column
+    width: 82px
+    @include plus769()
+        width: 112px
+.x1-price
+    display: flex
+    justify-content: space-between 
+    width: 
+    font-family: thin
+.x1-price-x
+    font-family: inherit
+    font-size: 11px
+    line-height: 12px
+.x1-price-price
+    font-family: inherit
+    text-transform: uppercase
+    font-size: 16px
+    line-height: 18px
+    @include plus769()
+        font-size: 22px
+        line-height: 25px
+
+.basket-items-li-center
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include plus769()
+        height: 100%
+        flex-grow: 1
+        
+
+.basket-items-li-remove 
+    display: flex
+    flex-grow: 0
+    @include plus769()
+        margin: 0 20px
+        margin-right: 0
+        align-items: center
+        justify-content: center
+        border-left: 1px solid rgba(255, 255, 255, 0.1)
+
+.basket-item-remove
+    @extend .profile-button
+    height: 28px
+    width: 28px
+    background-color: transparent
+    display: flex
+    justify-content: center
+    align-items: center
+    @include plus769()
+        border-radius: 25px
+        border: 1px solid #fff
+        width: 116px
+        height: 49px
+    svg
+        @include plus769()
+            display: none
+    span
+        display: none
+        @include plus769()
+            display: unset
