@@ -1,0 +1,426 @@
+
+// cart main 
+.cart-main
+    display: flex
+    flex-direction: column
+
+
+.cart-main-content
+    align-self: center
+    max-width: 1088px
+    width: 100%
+    flex: 1   
+    padding: 0 15px
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column
+    @include plus769()
+        margin-bottom: 130px
+
+// cart main header
+.basket-info-header
+    display: grid
+    justify-items: center
+    margin-top: 47px
+    margin-bottom: 50px
+    grid-template-columns: auto auto
+    justify-content: space-between
+
+    @include plus769()
+        align-items: center
+        grid-template-columns: 260px 1fr 260px
+        grid-template-rows: 75px
+        margin-top: 86px
+        margin-bottom: 73px
+    > * 
+        display: flex
+        flex-direction: column
+        align-items: center
+        > div
+            display: flex
+            margin-bottom: 15px
+            font-family: thin
+            font-feature-settings: 
+            font-size: 22px
+            line-height: 25px
+            text-transform: uppercase
+        a, p 
+            font-family: bld
+            font-size: 14px
+            line-height: 17px
+        a
+            color: $lightred
+        p
+            color: $lightpurpleless
+    input
+        background-color: transparent
+        display: flex
+        font-size: inherit
+        color: inherit
+        outline: none
+        width: 37px
+        text-align: center
+        margin: 0 4px
+        -webkit-writing-mode: horizontal-tb !important
+        text-rendering: inherit
+        text-transform: uppercase
+        text-align: center
+        -webkit-rtl-ordering: none
+        cursor: text
+        font-family: inherit
+.basket-info-header-left
+    input
+
+.basket-info-header-right
+    width: 100%
+    grid-column: 1 / span 2
+    @include plus769()
+        width: 260px
+        grid-column: unset
+
+.cart-button
+    @extend .login-button
+    width: 100%
+    margin-top: 30px
+    @include plus769()   
+        margin-top: 0
+
+// basket-items
+.basket-items-ul    
+    @include plus769()
+        .quantity-controls div #Rectangle_36, .quantity-controls div line
+            stroke: #fff
+        .quantity-controls div.disabled #Rectangle_36, .quantity-controls div.disabled line
+            stroke: #a1a1a1
+        .quantity-controls-plus
+            path
+                fill: #fff
+        .choose-quantity
+            color: #fff
+    .product-info-form
+        width: 100%
+    .select-ul
+        grid-gap: 10px
+        grid-template-columns: repeat(4, min-content)
+        @include plus769()
+            grid-gap: 30px
+            grid-template-columns: repeat(4, auto)
+.basket-items-ul
+    display: grid
+    grid-auto-rows: 254px
+    grid-template-columns: 100%
+    grid-gap: 40px
+    @include plus769()
+        grid-auto-rows: 300px
+    > li
+        position: relative
+        display: flex
+        justify-content: space-between
+        padding: 27px 0
+        padding-right: 30px
+        padding-left: 50%
+        align-items: center
+        background-color:#C4B3FA
+        border-radius: 12px
+        color: #fff
+        height: 161px
+        @include plus769()
+            height: unset
+            padding: 60px 0
+            padding-right: 55px
+            padding: 28px
+            padding-left: calc( 350 / 1088 * 100% )
+            padding-right: 30px 
+        @include plus1025()
+            padding-left: calc( 414 / 1088 * 100% )
+
+        img
+            position: absolute
+            bottom: 0
+            right: 50%
+            width: 60%
+            height: 110%
+            align-self: flex-end            
+            object-fit: contain
+            @include plus769()
+                width: unset
+                right: calc( (1 - 350 / 1088) * 100% )
+            @include sizePlus(850px)            
+                height: 110%
+    h1
+        grid-column: 1 / span 2
+
+        font-family: thin
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 18px
+        margin-bottom: 19px
+        @include plus769()
+            max-width: 213px
+            margin-bottom: 0
+            font-size: 22px
+            line-height: 25px
+    .ho-hr
+        @include plus769()
+            display: none
+    .product-info-form-sides
+        margin: 0
+        width: 100%
+    .choose-quantity-quantity-div input
+        background-color: unset
+    .product-info-form-left,
+    .product-info-form-right
+        align-self: stretch
+        max-width: 150px
+        width: 100%
+    .basket-items-ul li
+        padding: 0 !important
+
+.basket-items-li-center-top
+    display: grid
+    grid-template: auto auto / auto auto
+    @include plus769()
+        display: flex
+        justify-content: space-between
+    > .basket-items-li-remove
+        grid-row: 2 / span 1
+        display: flex !important
+        @include plus769()
+            display: none !important
+.basket-items-li-center-bottom
+    position: absolute
+    top: 100%
+    right: 50%
+    transform: translateX(50%)
+    color: $blackFont
+    display: flex
+    width: 100%
+    padding: 20px
+    justify-content: space-between
+    @include sizePlus(400)
+        width: calc( 100% - 50px )    
+    @include plus769()
+        color: #fff
+        transform: none
+        position: static
+        padding: 0
+
+
+    
+
+
+
+.prices-for-xs
+    display: flex
+    flex-direction: column
+    width: 82px
+    grid-column: 1 / span 1
+    grid-row: 2 / span 1
+    @include plus769()
+        width: 112px
+.x1-price
+    display: flex
+    justify-content: space-between 
+    width: 
+    font-family: thin
+.x1-price-x
+    font-family: inherit
+    font-size: 11px
+    line-height: 12px
+.x1-price-price
+    font-family: inherit
+    text-transform: uppercase
+    font-size: 16px
+    line-height: 18px
+    @include plus769()
+        font-size: 22px
+        line-height: 25px
+
+.basket-items-li-center
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include plus769()
+        height: 100%
+        flex-grow: 1
+        
+
+.basket-items-li-remove 
+    display: none
+    flex-grow: 0
+    @include plus769()
+        display: flex
+        margin: 0 20px
+        padding: 0
+        margin-right: 0
+        align-items: center
+        justify-content: center
+        border-left: 1px solid rgba(255, 255, 255, 0.1)
+
+.basket-item-remove
+    @extend .profile-button
+    height: 28px
+    width: 28px
+    background-color: transparent
+    display: flex
+    justify-content: center
+    align-items: center
+    @include plus769()
+        border-radius: 25px
+        border: 1px solid #fff
+        width: 116px
+        height: 49px
+    svg
+        @include plus769()
+            display: none 
+    span
+        display: none
+        @include plus769()
+            display: unset
+
+
+// order-now
+.cart-main-content.ordering    
+    .content-combiner
+        margin-top: 47px
+        @include plus769()
+            margin-top: 0
+    .clear-basket
+        display: none
+    .go-to-basket
+        display: unset
+    .basket-info-header
+        order: 1
+        @include plus769()
+            order: unset
+    .order-now
+        display: grid
+    .basket-items
+        display: none
+.order-now
+    max-width: 812px
+    margin: 0 auto
+    font-family: thin
+    display: none
+    grid-gap: 26px
+    color: $blackFont
+    grid-template-columns: 1fr
+    @include plus769()
+        grid-gap: 0
+        grid-template-columns: 1fr 1fr
+    input, .nicuSelect-container p
+        font-family: bld
+.provoke-question h2
+    font-family: thin
+    font-weight: 500
+    text-transform: uppercase
+    font-size: 22px
+    line-height: 25px
+    @include plus769()
+        font-size: 32px
+        line-height: 37px
+.payment-inputs
+    @include plus769()
+        max-width: 400px
+.checkmark
+    order: -1
+    display: block
+    width: 18px
+    height: 18px
+    border-radius: 4px
+    background-color: white
+    background-color: #EA433D
+    position: relative
+    margin-right: 15px
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 4px
+        right: 4px
+        width: 10px
+        height: 10px
+        border-radius: 2px
+        background-color: white
+
+#agree-terms-chkbx
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+    &:checked~.checkmark
+        &::after
+            background-color: #EA433D
+#reg-select
+    @extend #agree-terms-chkbx
+.agree-terms 
+    margin-top: 10px
+    @include plus769()
+        margin-top: 15px
+    label
+        display: flex
+        align-items: center
+        cursor: pointer
+        font-size: 14px
+        line-height: 17px
+        color: $blackFont
+        
+    span, a
+        font-family: bld !important
+
+
+// region select
+.input-div.reg-select-div
+    position: relative
+    height: 56px
+    cursor: pointer
+    background-color: #fff
+    transition: none
+    .nicuSelect-container
+        height: 100%
+        // overflow: hidden
+        display: flex
+        flex-direction: column
+        width: 100%
+        position: relative
+        p
+            height: 56px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-shrink: 0
+            font-size: 14px
+            font-family: thin
+            line-height: 16px
+            color: rgba(23, 23, 23, 0.5)
+            &.active-p
+                color: $blackFont
+            &::after
+                content: url(../images/angle-down-down.svg)
+        ul
+            background-color: #fff
+            position: absolute
+            right: -30px
+            top: 100%
+            width: calc( 100% + 104px )
+            padding-left: 74px
+            border-radius: 0 0 30px 30px
+            padding-bottom: 0
+            display: grid
+            grid-template-columns: 1fr
+            grid-auto-rows: 1fr
+            grid-row-gap: 6px
+            height: 0
+            overflow: hidden
+    
+    &.active
+        border-radius: 28px 28px 0 0    
+        .nicuSelect-container       
+            ul
+                padding-bottom: 24px
+                height: auto     
+        
+
+.go-to-basket
+    display: none

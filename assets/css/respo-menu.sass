@@ -1,18 +1,77 @@
+
 .respo-menu
     position: fixed
     bottom: 0
     z-index: 3
     width: 100%
-    height: 110px
-    border-radius: 30px 30px 0 0
-    display: grid   
+    border-radius: 30px 30px 0 0 
     background-color: #fff
-    grid-template-columns: repeat(6, 1fr)
-    padding: 0 42px
-    justify-items: center
-    align-items: center
-    background-color: #fff
-    
+        
+    .respo-menu-toggled-ul-container
+        height: 0
+        width: 100%
+        padding: 0 15px
+        overflow: hidden
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        transition: .3 ease-in
+    .respo-menu-toggled-ul
+        display: grid
+        width: 100%
+        justify-items: center
+        padding-top: 29px
+        padding-bottom: 0
+        grid-template-columns: 1fr
+        grid-auto-rows: auto
+        grid-gap: 0
+        transition: grid-gap .3s ease-in, padding-bottom .2s ease-in
+        border-bottom: 1px solid  rgba(23, 23, 23, 0.1)
+        li
+            a
+                font-size: 16px
+                line-height: 18px
+                text-transform: uppercase
+                color: $blackFont
+                font-family: thin
+        // &::after
+        //     content: ''
+        //     z-index: 1
+        //     position: absolute
+        //     bottom: -12px
+        //     display: block
+        //     width: calc(100% - 30px)
+        //     height: 1px
+        //     background-color:rgba(23, 23, 23, 0.1)
+
+    .respo-menu-others
+        height: 110px
+        width: 100%
+        display: grid  
+        grid-template-columns: repeat(6, 1fr)
+        padding: 0 42px
+        justify-items: center
+        align-items: center
+        transition: none
+    &.toggd
+        .burger
+            span
+                &:nth-child(1)
+                    transform: rotate(45deg)
+                    top: 6px
+                &:nth-child(2)
+                    width: 0
+                &:nth-child(3)
+                    transform: rotate(-45deg)
+                    top: 6px
+        .respo-menu-toggled-ul-container
+            height: 197px
+        .respo-menu-toggled-ul
+            grid-gap: 18px
+            padding-bottom: 29px
+        .respo-menu-others
+            // height: 97px
     @include plus769()
         display: none
     .hr
@@ -58,14 +117,5 @@
             top: 6px
         &:nth-child(3) 
             top: 12px
-    &.active
-        span
-            &:nth-child(1)
-                transform: rotate(45deg)
-                top: 6px
-            &:nth-child(2)
-                width: 0
-            &:nth-child(3)
-                transform: rotate(-45deg)
-                top: 6px
+
             

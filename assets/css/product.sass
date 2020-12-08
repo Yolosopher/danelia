@@ -116,6 +116,7 @@
 
 // product-section
 .product-section
+    padding: 0 15px
     padding-bottom: 50px
     @include plus1025()       
         margin: 0 auto
@@ -138,22 +139,31 @@
         grid-gap: 40px 16px
         grid-template-rows: 509px
         margin-bottom: 68px
+    li > a
+        height: 100%
+        display: flex
     li
         display: flex
         flex-direction: column
         text-align: center
         justify-content: space-between
         color: $blackFont
+        display: flex
+        flex-direction: column
+        text-align: center
+        justify-content: space-between
         > *
             color: inherit
         h1
             font-family: thin
             font-size: 16px
             line-height: 18px
-            text-transform: uppercase
             margin-bottom: 5px
             @include plus1025()
                 margin-bottom: 13px
+            a
+                text-transform: uppercase
+
         p, p span
             font-family: thin
             font-size: 22px

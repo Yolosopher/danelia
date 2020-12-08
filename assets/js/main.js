@@ -1,5 +1,6 @@
 // variables
 const burger = document.querySelector(".burger");
+const respoMenu = document.querySelector('.respo-menu')
 let homeMainArticles;
 if (document.querySelector(".home-main")) {
 	homeMainArticles = document
@@ -12,7 +13,7 @@ let a = [];
 
 // event listeners
 burger.addEventListener("click", () => {
-	burger.classList.toggle("active");
+	respoMenu.classList.toggle("toggd");
 });
 
 // load
