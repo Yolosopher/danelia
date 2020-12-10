@@ -56,7 +56,9 @@
         padding-right: 88px
         padding-left: 88px
         position: relative
-        z-index: 2
+        z-index: 2        
+    @include plus1025()
+        margin-bottom: 60px
         
 
 // rules page
@@ -84,9 +86,18 @@
     font-style: none
 .contact-left
     font-family: bld    
+    @include plus1025()
+        display: grid
+        grid-template-columns: 1fr 1fr
+        a
+            grid-row: 2 / 3
+            grid-column: 2 / 3
+            &:first-of-type
+                grid-column: 1 / 2
 .contact-right
     display: flex
     flex-direction: column
+    justify-self: flex-end
 
 .contact-right-map
     margin-top: 30px
@@ -109,6 +120,8 @@
     margin-bottom: 7px
     &:not(:first-child)
         margin-top: 30px
+        @include plus1025()
+            margin-top: 0
     + *
         font-family: rmn
         font-size: 16px

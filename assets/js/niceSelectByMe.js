@@ -2,9 +2,13 @@ const setNiceSelect = (niceSelect, realSelect) => {
     // set niceSelectValues
     realSelect.querySelectorAll('option').forEach(el => {
         let value = el.value;
+        let isSelected = el.selected;
         if (value) {
             let newLi = document.createElement('li');
             newLi.innerText = value;
+            if (isSelected) {
+                newLi.classList.add('active')
+            }
             niceSelect.appendChild(newLi);
         }
     })

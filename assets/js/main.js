@@ -116,4 +116,9 @@ respoCatLi.forEach(catli => {
 	catli.addEventListener('click', () => {
 		catli.classList.toggle('active')
 	})
-})
+});
+
+
+const passSuccChanged = () => {
+	document.querySelector('.success-error-message-outter').classList.add('active');
+}
