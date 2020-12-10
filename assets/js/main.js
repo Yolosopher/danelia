@@ -110,3 +110,10 @@ $(".productin-main .swiper-slide").on("click", function () {
 	mainPhotoSlider.slideTo(ind);
 });
 
+const respoCatLi = document.querySelectorAll('.footer-cat-li');
+
+respoCatLi.forEach(catli => {
+	catli.addEventListener('click', () => {
+		catli.classList.toggle('active')
+	})
+})

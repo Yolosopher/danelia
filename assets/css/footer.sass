@@ -1,20 +1,31 @@
 footer
     background: $blackFont
     color: white
-    height: 333px
+    min-height: 333px
     margin-bottom: 60px
     display: flex
     flex-direction: column
     align-items: center
-    @include plus769()
+    @include plus1025()
+        position: relative
         display: grid
         align-items: center
         justify-items: space-between
-        grid-template-columns: 1fr auto 1fr
-        grid-gap: 30px
-        margin-bottom: 0
-    @include sizePlus(900px)  
-        height: 189px        
+        grid-template-columns: 1fr auto
+        grid-template-rows: 1fr 100px
+        margin-bottom: 0  
+        min-height: 458px        
+        &::after
+            content: ''
+            margin: 0 auto
+            width: calc(100% - 100px)
+            height: 1px
+            display: block
+            position: absolute
+            bottom: 99px
+            background-color: rgba(255, 255, 255, .1)
+            @include plus1441()
+                width: calc( 100% - 280px )
 
 
 .all-rights-reserved
@@ -23,45 +34,143 @@ footer
     line-height: 19px
     padding-top: 40px
     padding-bottom: 20px
-    @include plus769()
+    @include plus1025()
         padding: 0
         justify-self: flex-start
 .logo-author-combined
-    order: -1
+    order: -1 
     justify-self: center
     display: flex
     flex-direction: column
     align-items: center
-
     width: 100%
     padding: 0 15px
     padding-top: 37px
     padding-bottom: 40px
     align-self: flex-end
     border-bottom: 1px solid rgba($color: #fff, $alpha: .2)
-    @include plus769()
+    @include plus1025()        
+        grid-column: 2 / 3
+        grid-row: 1 / 2
         order: unset
         width: unset
         padding: unset
         align-self: unset
         border-bottom: unset
-    svg
+    svg, img
+        width: 120px
+
         margin-bottom: 12px
     p
         font-family: lght
         font-size: 14px
         line-height: 17px
+        @include plus1025()
+            display: none
     a
         font-family: bld
         color: $lightred
 .footer-socials
-    @include plus769()
-        justify-self: flex-end
     display: flex
+    padding-bottom: 110px
+    @include plus1025()
+        justify-self: flex-end
+        display: none
+        padding-bottom: 0
     a
         width: 24px
         height: 24px
         display: flex
         justify-content: center
-        &:first-child
-            margin-right: 15px
+        &.ig
+            margin: 0 15px
+
+.footer-cat
+    margin-top: 37px
+    order: -2
+    padding: 0 15px
+    min-width: calc( 100% - 30px )
+    @include plus769()
+        padding: 0
+        min-width: 50%
+    @include plus1025()
+        order: unset
+        margin: unset
+        min-width: unset
+.footer-cat-ul
+    flex-direction: column
+    display: flex
+    justify-content: space-between
+    color: #FBFBFF   
+    @include plus1025()
+        flex-direction: row
+.footer-cat-li
+    max-height: 24px
+    transition: max-height -200ms 300ms ease-out
+    overflow: hidden
+    @include plus1025()
+        max-height: unset !important
+    &:not(:last-of-type)
+        margin-bottom: 18px
+    span
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        position: relative
+        @include upperCase(true)
+        margin-bottom: 29px
+        font-size: 18px
+        line-height: 21px
+
+        &::after
+            content: ''
+            display: block
+            background-image: url(../images/footer-plus.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            width: 24px
+            height: 24px
+            @include plus1025()
+                display: none !important
+.footer-cat-li.active
+    max-height: 9999px
+    transition: max-height 400ms ease-in
+    span
+        &::after
+            background-image: url(../images/footer-minus.svg)
+.footer-subcat-ul
+    display: flex
+    flex-direction: column
+    font-family: rmn
+    font-size: 16px
+    line-height: 19px
+    li
+        margin-bottom: 20px
+.footer-subcat-ul li:last-child
+    margin-bottom: 0
+
+.desktop-madeIN
+    p
+        font-family: lght
+        font-size: 14px
+        line-height: 17px
+        display: none
+        @include plus1025()
+            display: flex
+    a
+        font-family: bld
+        color: $lightred
+
+.footer-cat-li
+    &:last-child
+        display: none
+        @include plus1025()
+            display: unset
+        a
+            display: flex
+            align-items: center
+    svg
+        margin-right: 10px
+
+.active + .footer-cat-li
+    margin-top: 18px
