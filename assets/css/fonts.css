@@ -15,7 +15,9 @@
 
 @font-face {
   font-family: boldoutline;
-  src: url(../fonts/helvetica-75-bold-outline-587ebe00b76ba.ttf);
+  -webkit-font-feature-settings: 'case' on;
+          font-feature-settings: 'case' on;
+  src: url(../fonts/helvetica-75-bold-outline-587ebe00b76ba.ttf) format("TrueType");
 }
 
 @font-face {
@@ -30,6 +32,16 @@
 
 @font-face {
   font-family: thin;
-  src: url(../fonts/HelveticaNeue-Thin.otf);
+  src: url(../fonts/HelveticaNeue-Thin.otf) format("TrueType");
+}
+
+@font-face {
+  font-family: uppercasebold;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: "medcondobl";
+  src: url(../fonts/HelveticaNeue-MediumCondObl.otf);
 }
 /*# sourceMappingURL=fonts.css.map */

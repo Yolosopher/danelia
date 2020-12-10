@@ -28,7 +28,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 @font-face {
   font-family: boldoutline;
-  src: url(../fonts/helvetica-75-bold-outline-587ebe00b76ba.ttf);
+  -webkit-font-feature-settings: 'case' on;
+          font-feature-settings: 'case' on;
+  src: url(../fonts/helvetica-75-bold-outline-587ebe00b76ba.ttf) format("TrueType");
 }
 
 @font-face {
@@ -43,7 +45,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 @font-face {
   font-family: thin;
-  src: url(../fonts/HelveticaNeue-Thin.otf);
+  src: url(../fonts/HelveticaNeue-Thin.otf) format("TrueType");
+}
+
+@font-face {
+  font-family: uppercasebold;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: "medcondobl";
+  src: url(../fonts/HelveticaNeue-MediumCondObl.otf);
 }
 
 * {
@@ -192,7 +204,7 @@ header, footer, .login-menu-slider {
 }
 
 header {
-  font-family: lightcondensed !important;
+  font-family: uppercasebold !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,13 +268,13 @@ header nav {
 @media screen and (min-width: 1025px) {
   header nav {
     min-width: 600px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 @media screen and (min-width: 1441px) {
   header nav {
-    font-size: 16px;
-    line-height: 18px;
     min-width: 773px;
   }
 }
@@ -291,7 +303,7 @@ header nav ul li:not(.header-nav-logo) {
 
 .header-nav-ul li a {
   text-transform: uppercase;
-  font-family: thin !important;
+  font-family: uppercasebold !important;
 }
 
 a.hashtag-ig {
@@ -739,7 +751,7 @@ footer {
 }
 
 .article-left a {
-  font-family: bld;
+  font-family: uppercasebold;
   text-transform: uppercase;
   font-size: 11px;
   line-height: 14px;
@@ -794,6 +806,7 @@ footer {
 .home-aboutus h2 {
   font-size: 22px;
   line-height: 27px;
+  font-family: uppercasebold;
   text-transform: uppercase;
   position: absolute;
   top: 0;
@@ -811,6 +824,8 @@ footer {
 
 @media screen and (min-width: 769px) {
   .home-aboutus h2 {
+    padding-left: 0;
+    height: unset;
     position: static;
     margin-bottom: 50px;
   }
@@ -884,7 +899,10 @@ footer {
 
 .home-aboutus-textbox-a {
   font-size: 14px;
+  font-family: uppercasebold;
+  text-transform: uppercase;
   line-height: 17px;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -1010,6 +1028,7 @@ footer {
 .home-insta-article h2 {
   font-size: 22px;
   line-height: 27px;
+  font-family: uppercasebold;
   text-transform: uppercase;
 }
 
@@ -1037,6 +1056,8 @@ footer {
 
 .home-insta-article-p {
   font-size: 14px;
+  font-family: uppercasebold;
+  font-weight: 600;
   line-height: 17px;
   color: #EA433D;
 }
@@ -1103,7 +1124,7 @@ footer {
 }
 
 .aboutus-main-article-outter h1 {
-  font-family: bld;
+  font-family: uppercasebold;
   font-size: 22px;
   line-height: 27px;
   text-transform: uppercase;
@@ -1214,6 +1235,7 @@ footer {
 .contact-left-heading {
   font-size: 14px;
   text-transform: uppercase;
+  font-family: uppercasebold;
   line-height: 17px;
   opacity: .3;
   margin-bottom: 7px;
@@ -1274,7 +1296,8 @@ address {
   width: 100%;
   background-color: #171717;
   color: #fff;
-  font-family: bld;
+  font-family: uppercasebold;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1488,14 +1511,14 @@ form {
 }
 
 .form label, .profile-form-combiner form label, .form a, .profile-form-combiner form a, .form .login-button, .profile-form-combiner form .login-button, .form .profile-button, .profile-form-combiner form .profile-button, .form .basket-item-remove, .profile-form-combiner form .basket-item-remove, .form .product-see-more, .profile-form-combiner form .product-see-more, .form .productin-submit, .profile-form-combiner form .productin-submit, .form .cart-button, .profile-form-combiner form .cart-button {
-  font-family: inherit;
-  font-size: 14px;
+  @inlucde upperCase(true) {}  font-size: 14px;
   line-height: 17px;
   margin-bottom: 9px;
+  font-weight: 600;
 }
 
 .form label span, .profile-form-combiner form label span {
-  font-family: bld;
+  font-family: inherit;
   margin: 0 5px;
 }
 
@@ -1584,6 +1607,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .login-button, .profile-button, .basket-item-remove, .product-see-more, .productin-submit, .cart-button {
+  font-family: uppercasebold;
+  text-transform: uppercase;
   height: 56px;
   border-radius: 28px;
   display: -webkit-box;
@@ -1610,7 +1635,7 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .login-button.login-fb span, .login-fb.profile-button span, .login-fb.basket-item-remove span, .login-fb.product-see-more span, .login-fb.productin-submit span, .login-fb.cart-button span {
-  font-family: bld;
+  font-family: inherit;
   margin: 0 3px 0 5px;
 }
 
@@ -1838,10 +1863,26 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
           align-items: stretch;
 }
 
+@media screen and (min-width: 769px) {
+  .orders-history-li-right-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .orders-history-li-right-container > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 769px) {
+  .orders-history-li-right-container > div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .date-id {
@@ -1885,6 +1926,7 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 
 @media screen and (min-width: 769px) {
   .orders-history-li-right-container-nameDateId {
+    height: unset;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1896,8 +1938,10 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .orders-history-li-right-container-nameDateId h1 {
-  font-family: bld;
-  text-transform: uppercase;
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 30px;
@@ -1906,6 +1950,7 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 @media screen and (min-width: 769px) {
   .orders-history-li-right-container-nameDateId h1 {
     margin-bottom: unset;
+    max-width: 50%;
   }
 }
 
@@ -1988,8 +2033,10 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .priceAmount-name {
-  text-transform: uppercase;
-  font-family: bld;
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 11px;
   line-height: 14px;
   margin-bottom: 6px;
@@ -2006,8 +2053,10 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .priceAmount-amount {
-  text-transform: uppercase;
-  font-family: bld;
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-size: 16px;
   line-height: 20px;
 }
@@ -2279,7 +2328,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 
 .product-info-form-sides label {
   display: inline-block;
-  font-family: bld;
+  font-family: uppercasebold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 17px;
@@ -2304,11 +2354,24 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   cursor: pointer;
   font-family: lght;
   font-size: 18px;
+  color: #171717;
   line-height: 22px;
 }
 
 .product-info-form-sides .select-ul li.active {
   font-family: bld;
+}
+
+.content-combiner .select-ul li {
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.content-combiner .select-ul li.active {
+  color: #fff !important;
 }
 
 .choose-quantity-quantity-div {
@@ -2368,6 +2431,10 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 13px;
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 @media screen and (min-width: 1025px) {
@@ -2375,7 +2442,6 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
     margin-bottom: 27px;
     font-size: 32px;
     line-height: 38px;
-    text-transform: uppercase;
   }
 }
 
@@ -2474,10 +2540,10 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 15px;
-  font-family: thin;
+  font-family: uppercasebold;
+  text-transform: uppercase;
   font-size: 22px;
   line-height: 25px;
-  text-transform: uppercase;
 }
 
 .basket-info-header > * a, .basket-info-header > * p {
@@ -2654,7 +2720,7 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
-  font-family: thin;
+  font-family: uppercasebold;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
@@ -2765,6 +2831,39 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   }
 }
 
+.basket-info-header-totalQuantity {
+  font-family: uppercasebold;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -moz-appearance: textfield !important;
+}
+
+.basket-info-header-center-totalPrice {
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
+}
+
+.basket-info-header-center-totalPrice input {
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-weight: 600 !important;
+}
+
 .prices-for-xs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2795,7 +2894,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: thin;
+  font-family: uppercasebold;
+  text-transform: uppercase;
 }
 
 .x1-price-x {
@@ -3167,8 +3267,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 .price-filter h2 {
   margin-bottom: 23px;
   margin-left: 15px;
-  font-family: thin !important;
-  font-weight: 100;
+  font-family: uppercasebold !important;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
   color: #171717;
@@ -3255,7 +3355,9 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .price-filter .slider > .thumb .thumb-content {
-  font-family: thin;
+  font-family: uppercasebold;
+  text-transform: uppercase;
+  font-weight: 600;
   font-size: 14px;
   line-height: 16px;
   color: #171717;
@@ -3602,6 +3704,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
+  font-family: uppercasebold;
+  text-transform: uppercase;
 }
 
 .product-section-ul li > * {
@@ -3609,7 +3713,6 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .product-section-ul li h1 {
-  font-family: thin;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 5px;
@@ -3626,10 +3729,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
 }
 
 .product-section-ul li p, .product-section-ul li p span {
-  font-family: thin;
   font-size: 22px;
   line-height: 26px;
-  text-transform: uppercase;
 }
 
 .product-section-li-imgbox {
@@ -3760,7 +3861,8 @@ input, .login-button, .profile-button, .basket-item-remove, .product-see-more, .
   width: 100%;
   margin: 0 15px;
   border-radius: 25px;
-  font-family: thin;
+  font-family: uppercasebold;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
 }

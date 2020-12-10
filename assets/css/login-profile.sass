@@ -4,7 +4,8 @@
     width: 100%
     background-color: $blackFont
     color: #fff
-    font-family: bld
+    font-family: uppercasebold
+    text-transform: uppercase
     font-size: 16px
     line-height: 20px
     ul
@@ -128,13 +129,14 @@ form
     @include plus769()
         width: 100%
     label, a, .login-button
-        font-family: inherit
+        @inlucde upperCase(true)
         font-size: 14px
         line-height: 17px
         margin-bottom: 9px
+        font-weight: 600
     label
         span
-            font-family: bld
+            font-family: inherit
             margin: 0 5px
 .input-div
     display: flex
@@ -185,6 +187,8 @@ input, .login-button
         width: 24px
 
 .login-button
+    font-family: uppercasebold
+    text-transform: uppercase
     height: 56px
     border-radius: 28px
     display: flex
@@ -203,7 +207,7 @@ input, .login-button
         &:hover, &:active            
             // background-color: #178FF2
         span
-            font-family: bld
+            font-family: inherit
             margin: 0 3px 0 5px
 
 
@@ -351,8 +355,12 @@ input, .login-button
     flex-direction: column
     justify-content: center
     align-items: stretch
+    @include plus769()
+        justify-content: space-between    
     > div
         display: flex
+        @include plus769()
+            align-items: flex-start
 .date-id
     display: flex
     justify-content: space-between
@@ -368,19 +376,18 @@ input, .login-button
     flex-direction: column
     height: 95px
     justify-content: center
-    
-    
     @include plus769()
+        height: unset
         flex-direction: row
         align-items: center
     h1
-        font-family: bld
-        text-transform: uppercase
+        @include upperCase(true)
         font-size: 18px
         line-height: 22px
         margin-bottom: 30px
         @include plus769()
             margin-bottom: unset
+            max-width: 50%
     p
         font-family: rmn
         font-size: 14px
@@ -431,8 +438,7 @@ input, .login-button
         display: block
 
 .priceAmount-name
-    text-transform: uppercase
-    font-family: bld
+    @include upperCase(true)
     font-size: 11px
     line-height: 14px
     margin-bottom: 6px
@@ -443,8 +449,7 @@ input, .login-button
         line-height: 17px
         margin-bottom: 4px
 .priceAmount-amount
-    text-transform: uppercase
-    font-family: bld
+    @include upperCase(true)
     font-size: 16px
     line-height: 20px
     @include plus769()

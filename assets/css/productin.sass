@@ -145,7 +145,8 @@
         margin-bottom: 40px
     label
         display: inline-block
-        font-family: bld
+        font-family: uppercasebold
+        font-weight: 600
         text-transform: uppercase
         font-size: 14px
         line-height: 17px
@@ -162,10 +163,17 @@
             cursor: pointer
             font-family: lght
             font-size: 18px
+            color: $blackFont
             line-height: 22px
             &.active
                 font-family: bld
-
+.content-combiner
+    .select-ul
+        li
+            @include upperCase(true)
+            color: rgba(255, 255, 255, .5) !important
+            &.active
+                color: #fff !important
 .choose-quantity-quantity-div
     display: flex
     justify-content: space-between
@@ -198,11 +206,11 @@
         font-size: 18px
         line-height: 22px
         margin-bottom: 13px
+        @include upperCase(true)
         @include plus1025()
             margin-bottom: 27px
             font-size: 32px
             line-height: 38px
-            text-transform: uppercase
     .product-info-textdiv
         font-family: lght
         font-size: 14px

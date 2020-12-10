@@ -60,7 +60,7 @@
             font-size: 14px
             line-height: 20px
     a
-        font-family: bld
+        font-family: uppercasebold
         text-transform: uppercase
         font-size: 11px
         line-height: 14px
@@ -97,6 +97,7 @@
     h2
         font-size: 22px
         line-height: 27px
+        font-family: uppercasebold
         text-transform: uppercase
         position: absolute
         top: 0
@@ -107,6 +108,8 @@
         display: flex
         align-items: center
         @include plus769()
+            padding-left: 0
+            height: unset
             position: static
             margin-bottom: 50px
 
@@ -151,7 +154,10 @@
     
 .home-aboutus-textbox-a
     font-size: 14px
+    font-family: uppercasebold
+    text-transform: uppercase
     line-height: 17px
+    font-weight: 600
     white-space: nowrap
     &::before
         margin-right: 15px
@@ -224,6 +230,7 @@
     h2
         font-size: 22px
         line-height: 27px
+        font-family: uppercasebold
         text-transform: uppercase
         @include plus769()
             margin-bottom: 50px
@@ -241,5 +248,7 @@
         display: block
 .home-insta-article-p
     font-size: 14px
+    font-family: uppercasebold
+    font-weight: 600
     line-height: 17px
     color: $lightred
