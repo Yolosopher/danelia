@@ -66,20 +66,27 @@ let homeSwiper = new Swiper(".home-insta-slider", {
 
 // productin gallery slider
 var thumbsSlider = new Swiper(".thumbsSlider", {
-	spaceBetween: 16,
+	spaceBetween: 10,
 	slidesPerView: 1.5,
 	updateOnWindowResize: true,
 	direction: "horizontal",
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
-	centeredSlides: true,
+	// centeredSlides: true,
 	mousewheel: true,
+	loop: true,
 	
 	breakpoints: {
 		1025: {
 			direction: "vertical",
 			slidesPerView: 4.1,
-			centeredSlides: false
+			centeredSlides: false,
+			spaceBetween: 16,
+			mousewheel: true,
+			loop: false
+		},
+		0: {
+			mousewheel: false
 		}
 	},
 });

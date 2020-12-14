@@ -1,30 +1,57 @@
 // login menu slider
 .login-menu-slider
     height: 80px
-    width: 100%
+    position: relative
     background-color: $blackFont
     color: #fff
     font-family: uppercasebold
     text-transform: uppercase
     font-size: 16px
     line-height: 20px
+    overflow: hidden
     ul
-        display: flex
-        align-items: center
+        display: flex        
+        align-items: center 
+        align-content: center
+        position: relative
         height: 100%
-        width: 100%
-        overflow: hidden
-
+        overflow: scroll
+        -ms-overflow-style: none
+        scrollbar-width: none
+        @include plus769()
+            grid-gap: 35px
+        &::-webkit-scrollbar
+            display: none
+        
     a
-        display: block   
+        display: flex
         cursor: pointer  
-        white-space: nowrap
+
     li
-        opacity: .6 
+        display: flex
+        flex-shrink: 0
+        opacity: .6   
+        margin-right: 25px
+        &:nth-child(3)
+            flex-grow: 1
+            margin-right: 0 !important    
+        @include plus769()
+            margin-right: 35px
+        a
+            display: flex
+            white-space: nowrap
         &.login, &.personal-info
             opacity: 1  
         &:last-of-type
-            margin-right: 0 !important
+            margin-right: 0 !important            
+            @include plus769()
+                justify-content: flex-end
+                a                
+                    display: inline
+        &:only-child 
+            opacity: 1 !important
+        &.logout
+            opacity: 1 !important
     ~ .form-combiner .login-form
         max-height: unset
     ~ .form-combiner .register-form
@@ -161,7 +188,6 @@ form
         flex: unset
         input
             max-width: 95px
-            &:last-of-type
                 
 .span-dash
     font-family: bld !important
@@ -307,6 +333,11 @@ input, .login-button
             padding: 40px
             padding-right: 30px
 
+
+li
+    &:nth-of-type(even)
+        .orders-history-li-number
+            background-color: #FEA6D4
 
 .orders-history-li-number
     text-transform: uppercase

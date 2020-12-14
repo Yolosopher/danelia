@@ -33,7 +33,8 @@
         height: calc( 100vh - 250px )
 
 
-        
+@import variables
+             
 .thumbsSlider
     display: flex
     overflow: hidden
@@ -41,8 +42,6 @@
     @include plus1025()
         margin-right: 16px
         width: 122px
-        
-        
     .swiper-wrapper
         display: flex
         height: 100%
@@ -53,7 +52,9 @@
         flex-shrink: 0
         height: 100%
         padding-bottom: 70px
-        padding-right: 135px
+        padding-right: 80px
+        @include sizePlus(420px)
+            padding-right: 135px
         &.swiper-slide-active
             padding: 0
         @include plus1025()
@@ -81,6 +82,7 @@
     @include plus1025()
         max-width: unset
         max-height: unset
+        max-width: 674px
     .swiper-wrapper
         display: flex
         height: 100%
@@ -92,6 +94,7 @@
             flex-shrink: 0
             @include plus1025()
                 width: 100%
+                max-width: 674px
     .swiper-slide
         padding-bottom: 70px
         padding-right: 135px
@@ -136,8 +139,17 @@
     line-height: 16px
     margin-bottom: 3px
     margin-left: 2px
+    text-decoration: line-through
     
-
+.productin-main
+    .ho-hr
+        display: block !important
+        @include plus1025()
+            display: none !important
+    .product-info-form-sides
+        label
+            // font-size: 14px !important
+            // line-height: 17px !important
 .product-info-form-sides
     display: flex
     justify-content: space-between
@@ -169,13 +181,14 @@
             line-height: 22px
             &.active
                 font-family: bld
-.content-combiner
-    .select-ul
-        li
-            @include upperCase(true)
-            color: rgba(255, 255, 255, .5) !important
-            &.active
-                color: #fff !important
+.product-main
+    .content-combiner .select-ul
+        @media screen and ( max-width: 768px )            
+            li
+                @include upperCase(true)
+                color: rgba(255, 255, 255, .5) !important
+                &.active
+                    color: #fff !important
 .choose-quantity-quantity-div
     display: flex
     justify-content: space-between
@@ -184,6 +197,9 @@
         font-family: bld
         font-size: 18px
         line-height: 22px
+        color: $blackFont
+        background-color: transparent
+        max-width: 42px
 .quantity-controls
     display: flex
     div
@@ -222,3 +238,19 @@
             padding-bottom: 39px
             border-bottom: 2px solid rgba($color: #CCCCCC, $alpha: .3)
             border-radius: 2px
+
+
+// add to bag
+.product-info-addon
+    position: relative
+.add-fav-bag
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0  
+    cursor: pointer  
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(196, 179, 250, 0.1)
+

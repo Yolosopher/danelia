@@ -16,6 +16,10 @@
     flex-direction: column
     @include plus769()
         margin-bottom: 130px
+    &.ordering
+        margin-bottom: 0
+        @include plus769()
+            margin-bottom: 130px
 
 // cart main header
 .basket-info-header
@@ -29,7 +33,7 @@
     @include plus769()
         align-items: center
         grid-template-columns: 260px 1fr 260px
-        grid-template-rows: 75px
+        grid-template-rows: minmax(75px, auto)
         margin-top: 86px
         margin-bottom: 73px
     > * 
@@ -68,7 +72,8 @@
         cursor: text
         font-family: inherit
 .basket-info-header-left
-    input
+    align-items: flex-start
+    justify-self: flex-start
 
 .basket-info-header-right
     width: 100%
@@ -127,9 +132,7 @@
             height: unset
             padding: 60px 0
             padding-right: 55px
-            padding: 28px
             padding-left: calc( 350 / 1088 * 100% )
-            padding-right: 30px 
         @include plus1025()
             padding-left: calc( 414 / 1088 * 100% )
 
@@ -160,8 +163,13 @@
             font-size: 22px
             line-height: 25px
     .ho-hr
+        display: block
+        background-color: #cccccc
+        opacity: .3
         @include plus769()
             display: none
+            opacity: 1
+            background-color: $blackFont
     .product-info-form-sides
         margin: 0
         width: 100%
@@ -196,15 +204,58 @@
     width: 100%
     padding: 20px
     justify-content: space-between
-    @include sizePlus(400)
+    @include sizePlus(400px)
         width: calc( 100% - 50px )    
     @include plus769()
         color: #fff
         transform: none
         position: static
         padding: 0
+    .product-info-form-sides .select-ul li
+        @include plus769()
+            color: #fff
 
+.cart-main .product-info-form-sides
+    .product-info-form-left
+        max-width: 87px
+        @include plus769()
+            max-width: unset
+    .product-info-form-right
+        max-width: 130px
+        @include plus769()
+            max-width: unset
+    label
+        font-size: 11px !important
+        line-height: 12px !important
+        white-space: nowrap
+        @include plus769()
+            white-space: unset
+            font-size: 14px !important
+            line-height: 17px !important
 
+.basket-info-header-delivery-price
+    display: none
+    @include plus769()
+        white-space: nowrap
+.ordering
+    .basket-info-header-delivery-price
+        display: block
+        @include upperCase(true)
+        margin-top: 15px
+        color: $blackFont !important
+        font-size: 14px !important
+        line-height: 16px !important
+        text-align: right
+        @include plus769()
+            text-align: unset
+    .basket-info-header
+        @include plus769()
+            margin-bottom: 130px !important
+        
+.basket-info-header-center
+    align-items: flex-end
+    @include plus769()
+        align-items: center
     
 .basket-info-header-totalQuantity
     font-family: uppercasebold
@@ -252,6 +303,7 @@
     @include plus769()
         height: 100%
         flex-grow: 1
+        max-width: 400px
         
 
 .basket-items-li-remove 
@@ -400,7 +452,8 @@
             justify-content: space-between
             flex-shrink: 0
             font-size: 14px
-            font-family: thin
+            @include upperCase(true)
+            
             line-height: 16px
             color: rgba(23, 23, 23, 0.5)
             &.active-p
@@ -420,16 +473,24 @@
             grid-template-columns: 1fr
             grid-auto-rows: 1fr
             grid-row-gap: 6px
-            height: 0
+            max-height: 0
+            transition: max-height -400ms 600ms ease-out
             overflow: hidden
     
     &.active
         border-radius: 28px 28px 0 0    
         .nicuSelect-container       
             ul
-                padding-bottom: 24px
-                height: auto     
-        
+                padding-bottom: 24px    
+                max-height: 9999px
+                transition: max-height 800ms ease-in
+.nicuSelect-container
+    ul
+        @include upperCase(true)
+        li
+            opacity: .6
+            &.active, &:hover
+                opacity: 1
 
 .go-to-basket
     display: none

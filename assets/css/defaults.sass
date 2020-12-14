@@ -35,7 +35,8 @@ ul
 div.default-ul ul li
     list-style: initial
     list-style-position: inside
-
+html
+    overflow-x: hidden
 html::-webkit-scrollbar 
     @include plus1025()
         width: 10px
@@ -60,6 +61,13 @@ body
 header, footer, .login-menu-slider
     padding: 0 10px !important
     @include sizePlus(900px)    
+        padding: 0 50px !important
+    @include plus1441()        
+        padding: 0 140px !important
+
+.login-menu-slider
+    padding: 0 15px !important
+    @include sizePlus(768px)   
         padding: 0 50px !important
     @include plus1441()        
         padding: 0 140px !important
