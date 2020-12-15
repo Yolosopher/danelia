@@ -89,7 +89,7 @@
                 transform: translateX(-1000%)
         ~ .profile-container .orders-history-container
             max-height: unset
-            padding: 90px 0
+            padding: 50px 0
             transform: translateX(0)
             transition: all .3s, padding 0s
             @include plus769()
@@ -107,10 +107,11 @@
                 transform: translateX(-1000%)
         ~ .form-combiner .register-form
             max-height: unset
-            padding: 90px 0
+            padding: 50px 0
             transform: translateX(0)
             transition: all .3s, padding 0s
             @include plus769()
+                padding: 90px 0
                 transition: all .8s, padding 0s
         li.login
             opacity: .6
@@ -150,22 +151,50 @@ form
     font-family: bld
     width: calc( 100% - 30px )
     max-width: 403px
-    padding: 90px 0
+    padding: 50px 0
     margin: 0 auto
     transform: translateX(0)
-    @include plus769()
+    @include plus769()    
+        padding: 90px 0
         width: 100%
     label, a, .login-button
-        @inlucde upperCase(true)
         font-size: 14px
         line-height: 17px
         margin-bottom: 9px
         font-weight: 600
+        @include upperCase(true)
+        
     label
         span
             font-family: inherit
             margin: 0 5px
+#personal-info-form, #update-password-form
+    @include plus1025()
+        padding-top: 0 !important
+    .profile-pi-heading
+        margin-bottom: 28px
+        @include upperCase(true)
+        font-size: 22px
+        line-height: 25px
+        
+        @include plus1025()
+            margin-bottom: 68px
+    .label-input-combiner
+        margin-bottom: 10px
+        @include plus1025()
+            margin-bottom: 20px
+
+    .label-input-div
+        @include plus1025()
+            margin-bottom: 20px
+    label
+        display: block
+        margin-bottom: 9px
+        span
+            font-family: inherit
+            margin: 0 5px
 .input-div
+    position: relative
     display: flex
     align-items: center
     width: 100%
@@ -174,11 +203,13 @@ form
     border-radius: 28px
     background-color: #fff
     margin-bottom: 20px
+    border: 1px solid #E5E5E5
     @include plus769()
     > *
         height: 100%
     input, .span-dash
-        font-family: inherit
+        @include upperCase(false)     
+        text-transform: initial !important   
         display: flex
         flex: 1
     &.input-div-two-inside
@@ -211,7 +242,7 @@ input, .login-button
     max-width: fit-content
     svg
         width: 24px
-
+@import variables
 .login-button
     font-family: uppercasebold
     text-transform: uppercase
@@ -229,7 +260,24 @@ input, .login-button
         margin-top: 20px
         margin-bottom: 30px
     &.login-fb
+        margin-top: 21px
+        position: relative
         background-color: #178FF2
+        @include plus769()
+            margin-top: 41px
+        &::after
+            position: absolute
+            content: ''
+            top: -20px
+            right: 0
+            display: block
+            height: 1px
+            width: 100%
+            background-color: #cccccc
+            opacity: .3
+            @include plus769()
+                top: -40px
+
         &:hover, &:active            
             // background-color: #178FF2
         span
@@ -488,3 +536,7 @@ li
         line-height: 27px
     span
         margin-left: 5px
+
+// .login-main
+//     .form
+//         padding: 50px 0

@@ -3,8 +3,10 @@
     position: relative
     width: 100%
     height: 106px
+    margin-bottom: 46px
     @include plus1025()
         height: 450px
+        margin-bottom: 50px
 
 .product-main-background-container
     display: none
@@ -102,7 +104,7 @@
         align-items: center
         background-color: transparent
         flex-shrink: 0
-        &.active, &:hover
+        &.active, &:hover, &[active]
             cursor: pointer
             background-color: $blackFont
             border-color: $blackFont
@@ -221,7 +223,6 @@
         display: none
         margin-bottom: 0
     a
-        margin-right: 15px
         display: flex
         justify-content: center
         align-items: center
@@ -230,7 +231,6 @@
         width: 44px
         height: 44px
         @include plus1025()
-            margin-right: 20px
             width: 56px
             height: 56px
 .imgbox-hover-menu-heart
@@ -247,7 +247,6 @@
     @extend .profile-button
     height: 49px
     width: 100%
-    margin: 0 15px
     border-radius: 25px
     font-family: uppercasebold
     text-transform: uppercase

@@ -1,0 +1,65 @@
+.contact-form
+    margin-top: 50px
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 20px
+    @include upperCase(true)
+    @include plus1025()
+        margin-top: 70px
+        grid-template-columns: 1fr 1fr
+        grid-gap: 16px 20px    
+    > *
+        &:not([type=email]):not([type=text])
+            @include plus1025()
+                grid-column: 1 / span 2            
+    input:not([type=submit])
+        outline: none
+        padding: 0 30px
+        border-radius: 50px
+        height: 56px
+        border: 1px solid #E5E5E5
+        @include upperCase(false)
+        text-transform: lowercase !important
+        
+    textarea
+        padding: 30px
+        border-radius: 30px
+        height: 140px
+        border: 1px solid #E5E5E5
+        @include upperCase(false)
+        text-transform: lowercase !important
+        @include plus769()
+            margin-bottom: 20px
+
+    .im-not-a-robot
+        text-align: center
+        margin-bottom: 10px
+        border: 1px solid #E5E5E5
+        color: #E5E5E5
+        border-radius: 30px
+        height: 60px
+        width: 100%
+        padding: 0 !important
+        display: flex
+        justify-content: center
+        align-items: center
+        @include plus769() 
+            margin-bottom: 20px
+            height: 90px
+            max-width: 260px
+            margin: 0 auto
+            margin-bottom: 20px
+
+    input[type=submit]
+        justify-self: center
+        @include plus769()            
+            max-width: 400px
+            margin: 0 auto
+    .cart-button
+        margin-top: 0
+
+.aboutus-main.contact-main
+    > div:last-child
+        padding-bottom: 10px
+        @include plus1025()
+            padding-bottom: 30px

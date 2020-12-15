@@ -13,37 +13,30 @@
 @import cart
 @import input
 @import product
+@import contact
+
+// profile validation
+.invalid.invalid-shown
+    .validation-error-svg
+        display: flex
+    .validation-error-message
+        display: block
 
 
-.contact-form
-    margin-top: 70px
-    display: grid
-    grid-template-columns: 1fr
-    grid-gap: 20px
-    @include upperCase(true)
-    @include plus1025()
-        grid-template-columns: 1fr 1fr
-        grid-gap: 16px 20px    
-    > *
-        &:not([type=email]):not([type=text])
-            @include plus1025()
-                grid-column: 1 / span 2            
-    input:not([type=submit])
-        outline: none
-        padding: 0 30px
-        border-radius: 50px
-        height: 56px
-        border: 1px solid #E5E5E5
-    textarea
-        padding: 30px
-        border-radius: 30px
-        height: 140px
-        border: 1px solid #E5E5E5
-        margin-bottom: 20px
-    .im-not-a-robot
-        text-align: center
-        margin-bottom: 20px
+.validation-error-svg
+    position: absolute
+    right: 30px
+    display: none
+    align-items: center
 
-    input[type=submit]
-        max-width: 400px
-        justify-self: center
+    
+.validation-error-message
+    position: absolute
+    display: none
+    right: 0
+    top: -25px
+    height: unset !important
+    font-family: bld
+    font-size: 11px
+    line-height: 13px
+    color: #EA433D

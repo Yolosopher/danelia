@@ -31,7 +31,7 @@
 				class="hashtag-ig"
 				href="https://www.instagram.com/"
 				target="_blank"
-				>#squadGD</a
+				>#squadGeo</a
 			>
 			<nav class="header-nav">
 				<ul class="header-nav-ul">
@@ -267,7 +267,7 @@
 								60.00<span>₾</span>
 							</p>
 						</div>
-						<div class="add-fav-bag">
+						<a href="javascript:void(0)" class="add-fav-bag">
 							<svg
 								id="Component_2_70"
 								data-name="Component 2 – 70"
@@ -311,7 +311,7 @@
 									/>
 								</g>
 							</svg>
-						</div>
+						</a>
 					</div>
 					<div class="product-info-textdiv default-ul">
 						<p>
@@ -1110,6 +1110,16 @@
 				if (val >= 1) minus.classList.remove("disabled");
 				quantityInput.value = val + 1;
 			});
+
+
+		</script>
+		<script>
+			const addInBasket = document.querySelector('.productin-submit');
+			const bagIcon = document.querySelector('.add-fav-bag');
+			
+			bagIcon.addEventListener('click', () => {
+				addInBasket.dispatchEvent('click');
+			})
 		</script>
 	</body>
 </html>

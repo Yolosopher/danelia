@@ -208,6 +208,7 @@
         width: calc( 100% - 50px )    
     @include plus769()
         color: #fff
+        width: 100%
         transform: none
         position: static
         padding: 0
@@ -463,9 +464,11 @@
         ul
             background-color: #fff
             position: absolute
-            right: -30px
+            z-index: 1
+            border-top: transparent
+            right: -31px
             top: 100%
-            width: calc( 100% + 104px )
+            width: calc( 100% + 106px )
             padding-left: 74px
             border-radius: 0 0 30px 30px
             padding-bottom: 0
@@ -480,7 +483,9 @@
     &.active
         border-radius: 28px 28px 0 0    
         .nicuSelect-container       
-            ul
+            ul                
+                border: 1px solid #E5E5E5
+                border-top: transparent
                 padding-bottom: 24px    
                 max-height: 9999px
                 transition: max-height 800ms ease-in

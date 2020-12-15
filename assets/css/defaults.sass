@@ -32,9 +32,14 @@ ul
         list-style-position: inside
         list-style: none
     
-div.default-ul ul li
-    list-style: initial
-    list-style-position: inside
+div.default-ul
+    p
+        &:not(:last-child)
+            margin-bottom: 1em
+            
+    ul li
+        list-style: initial
+        list-style-position: inside
 html
     overflow-x: hidden
 html::-webkit-scrollbar 

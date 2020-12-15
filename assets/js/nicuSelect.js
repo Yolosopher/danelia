@@ -22,6 +22,8 @@ const nicuSelecto = (niceSelect, realSelect) => {
                 newLi.innerHTML = value;
                 niceSelect.appendChild(newLi);
             }
+        } else {
+            realSelect.parentElement.querySelector('p').innerText = el.value;
         }
 
     })
