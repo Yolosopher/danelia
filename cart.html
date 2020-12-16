@@ -344,7 +344,6 @@
 															min="1"
 															max="100"
 															value="1"
-															required
 														/>
 														<div
 															class="quantity-controls"
@@ -599,7 +598,6 @@
 															min="1"
 															max="100"
 															value="1"
-															required
 														/>
 														<div
 															class="quantity-controls"
@@ -802,22 +800,24 @@
 									</svg>
 								</div>
 								<select name="reg-select" id="reg-select">
-									<option disabled="disabled" selected="">თბილისი</option>
-									<option value="გლდანი">გლდანი</option>
-									<option value="ნაძალადევი">ნაძალადევი</option>
-									<option value="მთაწმინდა">მთაწმინდა</option>
-									<option value="თემქა">თემქა</option>
-									<option value="ვაკე">ვაკე</option>
-									<option value="საბურთალო">საბურთალო</option>
-									<option value="ვარკეთილი">ვარკეთილი</option>
-									<option value="ბიბუბე">ბიბუბე</option>
+									<option value="გლდანი" selected data-delivery-price="3">გლდანი</option>
+									<option value="ნაძალადევი" data-delivery-price="4">ნაძალადევი</option>
+									<option value="მთაწმინდა" data-delivery-price="2">მთაწმინდა</option>
+									<option value="თემქა" data-delivery-price="5">თემქა</option>
+									<option value="ვაკე" data-delivery-price="1">ვაკე</option>
+									<option value="საბურთალო" data-delivery-price="5">საბურთალო</option>
+									<option value="ვარკეთილი" data-delivery-price="7">ვარკეთილი</option>
+									<option value="ბიბუბე" data-delivery-price="9">ბიბუბე</option>
 								</select>
 								<div class="nicuSelect-container">		
 									<p></p>
 									<ul id="nicuSelect"></ul>
 								</div>
+								<div class="validation-error-message">
+									გთხოვთ სწორად შეავსოთ ველი
+								</div>
 							</div>
-							<div class="input-div">
+							<div class="input-div invalid">
 								<div class="input-div-logo">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -853,10 +853,43 @@
 									name="order-now-exact-address"
 									id="order-now-exact-address"
 									placeholder="ზუსტი მისამართი"
-									required
 								/>
+								<div class="validation-error-svg">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+									>
+										<g
+											id="Group_15786"
+											data-name="Group 15786"
+											transform="translate(-1112 -424)"
+										>
+											<rect
+												id="Rectangle_794"
+												data-name="Rectangle 794"
+												width="24"
+												height="24"
+												transform="translate(1112 424)"
+												fill="rgba(255,255,255,0)"
+											/>
+											<path
+												id="Info_Square"
+												data-name="Info Square"
+												d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+												transform="translate(1112 424)"
+												fill="#ea433d"
+												fill-rule="evenodd"
+											/>
+										</g>
+									</svg>
+								</div>
+								<div class="validation-error-message">
+									გთხოვთ ველი მეტად შეავსოთ
+								</div>
 							</div>
-							<div class="input-div">
+							<div class="input-div invalid">
 								<div class="input-div-logo">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -912,8 +945,41 @@
 									name="order-now-tel"
 									id="order-now-tel"
 									placeholder="მობ.ტელეფონი"
-									required
 								/>
+								<div class="validation-error-svg">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+									>
+										<g
+											id="Group_15786"
+											data-name="Group 15786"
+											transform="translate(-1112 -424)"
+										>
+											<rect
+												id="Rectangle_794"
+												data-name="Rectangle 794"
+												width="24"
+												height="24"
+												transform="translate(1112 424)"
+												fill="rgba(255,255,255,0)"
+											/>
+											<path
+												id="Info_Square"
+												data-name="Info Square"
+												d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+												transform="translate(1112 424)"
+												fill="#ea433d"
+												fill-rule="evenodd"
+											/>
+										</g>
+									</svg>
+								</div>
+								<div class="validation-error-message">
+									გთხოვთ შეავსოთ სწორი ფორმატით
+								</div>
 							</div>
 							<div class="agree-terms">
 								<label for="agree-terms-chkbx">
@@ -1551,6 +1617,8 @@
 			// run
 			checkingCartValues();
 		</script>
+		<!-- form validations -->
+		<script src="assets/js/cart-validation.js"></script>
 		<!-- plus & minus and others -->
 		<script>
 			const chooseSizes = document.querySelectorAll(
@@ -1621,12 +1689,26 @@
 			let productQuantity = document.getElementById('totalQuantity');
 			const goToBasket = document.querySelector('.go-to-basket');
 
+			// checkbox input
+			const agreeTerms = document.getElementById('agree-terms-chkbx');
+
+			// region select
+			const regSelecttt = document.getElementById('reg-select');
+
 			cartButton.addEventListener('click', (e)=> {
 				if(cartContent.classList.contains('ordering')) {
 					
+					let inputDivs = document.querySelectorAll('.payment-inputs .input-div.invalid');
+					if (inputDivs[0] || !agreeTerms.checked || !document.querySelector('.active-p') || !checkRegSelect(regSelecttt)) {
+						inputDivs.forEach(each => {
+							each.classList.add('invalid-shown');
+						});
+						e.preventDefault();
+						return false;
+					}
+
 				} else {
 					if (!productQuantity.value || +productQuantity.value != 0) {
-						
 						cartContent.classList.add('ordering');
 					} else {						
 						e.preventDefault();
@@ -1639,8 +1721,16 @@
 				cartContent.classList.remove('ordering');
 			})
 
+			// delivery price updater
+			const deliveryPriceSpan = document.querySelector('.basket-info-header-delivery-price span');
+			
+			const deliveryPriceUpdater = () => {
+				let sel = regRealSelect.querySelector('option.active');
+				let delivPrice = sel.getAttribute('data-delivery-price');
 
-
+				deliveryPriceSpan.innerText = delivPrice;
+			}
+			deliveryPriceUpdater()
 		</script>
 
 	</body>

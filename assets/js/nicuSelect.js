@@ -14,7 +14,11 @@ const nicuSelecto = (niceSelect, realSelect) => {
                 };
                 valTextPairs = [...valTextPairs, pair]
             }
-    
+            if (el == realSelect.querySelectorAll('option')[0]) {       
+                el.classList.add('active')
+                realSelect.parentElement.querySelector('p').innerText = el.innerText;
+                realSelect.parentElement.querySelector('p').classList.add('active-p');
+            }
     
             let value = el.innerHTML;
             if (el.value) {
@@ -24,8 +28,8 @@ const nicuSelecto = (niceSelect, realSelect) => {
             }
         } else {
             realSelect.parentElement.querySelector('p').innerText = el.value;
+            realSelect.parentElement.querySelector('p').classList.add('active-p');
         }
-
     })
 
     // console.log(valTextPairs);
@@ -44,13 +48,18 @@ const nicuSelecto = (niceSelect, realSelect) => {
             // console.log(filteredOption[0].val);
             // value = value.toLowerCase();
             realSelect.value = filteredOption[0].val;
+
+            $(`option[value="${filteredOption[0].val}"]`).parent().find('option').removeClass('active');
             $(`option[value="${filteredOption[0].val}"]`).addClass('active');
+            
+
             $(realSelect).parent().find('p').addClass('active-p');
             $(realSelect).parent().find('.input-div-logo svg')[0].style.fill = "rgb(23, 23, 23)";
             $(realSelect).parent().find('p').text(filteredOption[0].txt);
 
             $(realSelect).parent().removeClass('err');
             $(realSelect).parent().find('.input-error-message').removeClass('active');
+            deliveryPriceUpdater();
         })
     });
 };
@@ -63,3 +72,4 @@ const nicuSelecto = (niceSelect, realSelect) => {
 //     <option value="l"></option>
 //     <option value="xl"></option>
 // </select>
+

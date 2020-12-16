@@ -464,11 +464,13 @@
         ul
             background-color: #fff
             position: absolute
-            z-index: 1
-            border-top: transparent
+            z-index: -1
             right: -31px
             top: 100%
-            width: calc( 100% + 106px )
+            width: calc( 100% + 106px )            
+            border: 1px solid #E5E5E5
+            border-color: transparent
+            border-top: transparent
             padding-left: 74px
             border-radius: 0 0 30px 30px
             padding-bottom: 0
@@ -484,6 +486,7 @@
         border-radius: 28px 28px 0 0    
         .nicuSelect-container       
             ul                
+                z-index: 1
                 border: 1px solid #E5E5E5
                 border-top: transparent
                 padding-bottom: 24px    

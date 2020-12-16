@@ -77,10 +77,19 @@ const checkEmailPut = (emailPut) => {
 };
 const checkPassPut = (passPut) => {
     let id = passPut.id;
-    let isRepeated = id === "login-passwordrepeat-forReg";
+	let isRepeated = id === "login-passwordrepeat-forReg";
+	let isLoginPass = Boolean(passPut.closest('#login-form'));
+
+	passPut.value = String(passPut.value);
 	let value = passPut.value;
 	let parent = passPut.parentElement;
-	let isPass = /^[A-Za-z0-9]+$/.test(value);
+
+	if (isLoginPass) {
+		parent.classList.remove("invalid");
+		parent.classList.remove("invalid-shown");
+		return;
+	}
+
 	if (value === "") {
 		parent.classList.add("invalid");
 		parent.classList.remove("invalid-shown");
@@ -93,7 +102,7 @@ const checkPassPut = (passPut) => {
 		    parent.classList.remove("invalid");
 		    parent.classList.remove("invalid-shown");
         }
-    } else if (isPass && value.length > 7) {
+    } else if (value.length > 5 && value.length < 51) {
 		parent.classList.remove("invalid");
 		parent.classList.remove("invalid-shown");
 	} else {

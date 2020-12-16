@@ -2,16 +2,21 @@
     margin-top: 50px
     display: grid
     grid-template-columns: 1fr
-    grid-gap: 20px
+    grid-gap: 25px
     @include upperCase(true)
     @include plus1025()
         margin-top: 70px
         grid-template-columns: 1fr 1fr
-        grid-gap: 16px 20px    
+        grid-gap: 25px 20px    
     > *
-        &:not([type=email]):not([type=text])
+        &:not([for="contact-email"]):not([for="contact-name"])
             @include plus1025()
-                grid-column: 1 / span 2            
+                grid-column: 1 / span 2   
+    label
+        display: flex
+        position: relative
+        input, textarea
+            flex-grow: 1         
     input:not([type=submit])
         outline: none
         padding: 0 30px
@@ -20,7 +25,9 @@
         border: 1px solid #E5E5E5
         @include upperCase(false)
         text-transform: lowercase !important
-        
+    label[for="contact-text"]
+        @include plus769()
+            margin-bottom: 20px
     textarea
         padding: 30px
         border-radius: 30px
@@ -28,8 +35,6 @@
         border: 1px solid #E5E5E5
         @include upperCase(false)
         text-transform: lowercase !important
-        @include plus769()
-            margin-bottom: 20px
 
     .im-not-a-robot
         text-align: center

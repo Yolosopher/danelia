@@ -7,7 +7,7 @@ const setNiceSelect = (niceSelect, realSelect) => {
             let newLi = document.createElement('li');
             newLi.innerText = value;
             if (isSelected) {
-                newLi.classList.add('active')
+                newLi.classList.add('active');
             }
             niceSelect.appendChild(newLi);
         }
