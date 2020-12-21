@@ -5,16 +5,21 @@
     height: 106px
     margin-bottom: 46px
     @include plus1025()
-        height: 450px
+        height: 350px
         margin-bottom: 50px
+    @media screen and ( min-width: 1025px ) and (min-height: 1000px) 
+        height: 450px
 
 .product-main-background-container
     display: none
     grid-template-columns: 64fr 36fr
-    height: 450px
     @include plus1025()
         display: grid
-        grid-template-rows: 450px
+        height: 350px
+        grid-template-rows: 350px    
+    @media screen and ( min-width: 1025px ) and (min-height: 1000px) 
+        height: 450px
+        grid-template-rows: 450px  
 .main-bg-image
     height: 100%
     padding-right: 20px
@@ -335,11 +340,35 @@
     @include plus1025()
         margin-bottom: 0
 
+.productin-redirect
+    display: inline !important
+    justify-content: center
+    align-items: center
+    margin-top: 20px !important
+    padding: 20px 36px !important
+    border: 1px solid #fff
+    font-family: bld
+    font-size: 14px
+    line-height: 17px
+    border-radius: 28px
+    min-width: unset !important
+    max-width: unset !important
+    width: unset !important
+    height: unset !important
+    max-height: unset !important
+    min-height: unset !important
+    transform: translateY(-150px)
+    transition: all .5s
+
 .product-section-li-imgbox
+        
     .imgbox-hover-menu-bag
         transform: translateY(150px) !important
         transition: all .5s
     &:hover, &.active
+        .productin-redirect
+            transform: translateY(0)
+            transition: all .5s
         .imgbox-hover-menu-bag
             transform: translateY(0px) !important
             transition: all .5s
