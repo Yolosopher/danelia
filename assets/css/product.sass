@@ -72,13 +72,12 @@
     justify-content: center
     width: 100%
     overflow: hidden
-    @include plus1025()
-        width: 400px
     p
         display: none
+        max-width: 400px
         @include plus1025()
             display: unset
-
+@import variables
 .product-main-categories-ul
     display: flex
     grid-template-columns: repeat(auto-fill, 140px)
@@ -95,6 +94,9 @@
         grid-gap: 16px 20px 
         grid-template-columns: repeat(2, 140px)
         margin-bottom: 40px
+    @include plus1441()
+        grid-template-columns: repeat(3, 140px)
+
     li
         height: 46px
         width: 140px
@@ -142,6 +144,7 @@
         @include plus1025()
             display: flex
             margin-bottom: 0
+            flex-direction: column-reverse
         
             a
                 white-space: nowrap
@@ -220,13 +223,11 @@
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: 371px
     grid-gap: 30px 10px
-    margin-bottom: 40px
     @include plus769()
         grid-template-columns: repeat(3, 1fr)        
     @include plus1025()
         grid-gap: 40px 16px
         grid-template-rows: 509px
-        margin-bottom: 68px
     li > a
         height: 100%
         display: flex
@@ -290,6 +291,7 @@
         height: 100%
         object-fit: cover
         border-radius: 12px
+        background-color: #f1f0f5
     .imgbox-hover-menu
         position: absolute
         z-index: -1
@@ -352,6 +354,14 @@
     text-transform: uppercase
     font-size: 14px
     line-height: 16px
+    margin-top: 20px
+    grid-column: 1 / -1
+    @include plus769()    
     @include plus1025()
         width: 201px
         margin: 0 auto
+        margin-top: 28px
+        &:hover
+            background-color: #A38CEB  
+    &:active
+        background-color: #A38CEB

@@ -39,7 +39,20 @@ header
                 display: none
                 @include plus769()
                     display: initial
+@import variables
 .header-nav-ul
+    li
+        transition-timing-function: ease-out
+        transition-duration: .1s
+        @include plus1025()
+            &:hover
+                color: #C4B3FA
+        &:active, &.active
+            color: #C4B3FA
+        a
+            transition-timing-function: ease-out
+            transition-duration: .1s
+            
     li a
         text-transform: uppercase
         font-family: uppercasebold !important

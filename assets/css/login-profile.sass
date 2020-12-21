@@ -254,8 +254,11 @@ input, .login-button
     color: #fff
     background-color: $lightpurple
     cursor: pointer
-    &:hover, &:active
-        // background-color: $lightpurple
+    @include plus1025()    
+        &:hover
+            background-color: #A38CEB  
+    &:active
+        background-color: #A38CEB
     &.login-login, &.login-reg
         margin-top: 20px
         margin-bottom: 30px
@@ -325,7 +328,8 @@ input, .login-button
 .label-input-div
     flex-grow: 1
     &:not(:last-child)
-        margin-right: 15px
+        @include plus1025()
+            margin-right: 15px
 
 .label-input-combiner
     display: flex

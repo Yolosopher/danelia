@@ -128,4 +128,29 @@ respoCatLi.forEach(catli => {
 
 const passSuccChanged = () => {
 	document.querySelector('.success-error-message-outter').classList.add('active');
-}
+};
+
+const navActive = () => {
+	if (document.querySelector('.productin-main') || document.querySelector('.product-main')) {
+		document.querySelectorAll('.header-nav-ul li')[1].classList.add('active');
+		document.querySelectorAll('.respo-menu-toggled-ul li')[1].classList.add('active');
+	} else if (document.querySelector('.home-main-section')) {
+		document.querySelectorAll('.header-nav-ul li')[0].classList.add('active');
+		document.querySelector('.respo-menu-home').classList.add('active');
+		document.querySelectorAll('.respo-menu-toggled-ul li')[0].classList.add('active');
+	} else if (document.querySelector('.aboutus-main-article-textdiv')) {
+		document.querySelectorAll('.header-nav-ul li')[3].classList.add('active');
+		document.querySelectorAll('.respo-menu-toggled-ul li')[2].classList.add('active');
+	} else if (document.querySelector('.contact-form')) {
+		document.querySelectorAll('.header-nav-ul li')[4].classList.add('active');
+		document.querySelectorAll('.respo-menu-toggled-ul li')[3].classList.add('active');
+	} else if (document.querySelector('.cart-main')) {
+		document.querySelector('.bag').classList.add('active');
+		document.querySelector('.respo-menu-bag').classList.add('active');
+	} else if (document.querySelector('.login-main')) {
+		document.querySelector('.header-iconmenu-ul .profile').classList.add('active');
+		document.querySelector('.respo-menu-profile').classList.add('active');
+	}
+};
+
+navActive();

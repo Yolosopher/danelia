@@ -328,7 +328,11 @@
 							<li>ნიკა</li>
 							<li>ნიკა</li>
 						</ul>
+
+						<!-- აქ -->						
+						<span class="size-guide-btn" href="javascript:void(0)">Size Guide</span>
 					</div>
+					<!-- აქ ვერა -->
 				</article>
 
 				<form class="product-info-form">
@@ -341,10 +345,9 @@
 								id="choose-size"
 								required
 							>
-								<option value="s">s</option>
-								<option value="m" selected>m</option>
-								<option value="l">l</option>
-								<option value="xl">xl</option>
+								<option value="small">small</option>
+								<option value="medium" selected>medium</option>
+								<option value="large">large</option>
 							</select>
 							<ul class="select-ul"></ul>
 						</div>
@@ -507,7 +510,47 @@
 				</form>
 			</div>
 		</main>
-
+		<!-- size guide -->
+        <div class="productin-size-guide">
+            <div class="productin-size-guide-image-container">
+                <div class="success-error-message-x-btn">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="31.113"
+                        height="31.113"
+                        viewBox="0 0 31.113 31.113"
+                    >
+                        <g
+                            id="Plus"
+                            transform="translate(15.556 -1.414) rotate(45)"
+                        >
+                            <path
+                                id="Path_51"
+                                data-name="Path 51"
+                                d="M12,8.327v7.326m3.667-3.663H8.333"
+                                fill="none"
+                                stroke="#ccc"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            />
+                            <path
+                                id="Path_52"
+                                data-name="Path 52"
+                                d="M16.686,2H7.314C4.048,2,2,4.312,2,7.585v8.83C2,19.688,4.038,22,7.314,22h9.371C19.962,22,22,19.688,22,16.415V7.585C22,4.312,19.962,2,16.686,2Z"
+                                fill="none"
+                                stroke="#ccc"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            />
+                        </g>
+                    </svg>
+                </div>
+                <!-- <div class="error-svg"></div> -->
+                <img src="assets/images-old/aboutus-cover.png" alt="size-guide-image">
+            </div>
+        </div>
 		<!-- footer -->
 		<footer>
 			<div class="footer-cat">
@@ -1118,7 +1161,47 @@
 			
 			bagIcon.addEventListener('click', () => {
 				addInBasket.dispatchEvent('click');
-			})
+			});
+
+			// size-guide
+			
+			const openMessageBox = () => {
+				document.querySelector('.productin-size-guide').classList.toggle('active');
+			};
+			const openMessageBoxRemove = () => {
+				document.querySelector('.productin-size-guide').classList.remove('active');
+			};
+			
+			let closeMessageBoxBtn = document.querySelector('.success-error-message-x-btn');
+
+			if (closeMessageBoxBtn) {
+				closeMessageBoxBtn.addEventListener('click', openMessageBox);
+			}
+
+			
+			
+			document.addEventListener('click', obj => {
+				if (document.querySelector('.productin-size-guide').classList.contains('active')) {
+					console.log('contains acitve');
+					if (obj.target.closest('.productin-size-guide-image-container')) {
+						return;
+					} else {
+						if (obj.target.closest('.success-error-message-x-btn')) {
+							return false;
+						} else {							
+							openMessageBoxRemove()
+						}
+					}
+				} else {
+					console.log("doesn't contain active");
+				}
+			}, true)
+			const sizeGuideBtn = document.querySelector('.size-guide-btn');
+			if (sizeGuideBtn) {
+				sizeGuideBtn.addEventListener('click', () => {
+					document.querySelector('.productin-size-guide').classList.add('active');
+				})
+			}
 		</script>
 	</body>
 </html>

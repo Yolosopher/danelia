@@ -198,7 +198,7 @@
 										>სახელი<span>&</span>გვარი</label
 									>
 									<div
-										class="profile-input-div input-div-two-inside"
+										class="profile-input-div input-div-two-inside invalid"
 									>
 										<div class="input-div-logo">
 											<svg
@@ -242,7 +242,7 @@
 											id="update-firstname"
 											placeholder="სახელი"
 											autofocus
-											required
+											value="ნიკა"
 										/>
 										<div class="span-dash">/</div>
 										<input
@@ -252,13 +252,16 @@
 											id="update-lastname"
 											placeholder="გვარი"
 											autofocus
-											required
+											value="ნიშნიანიძე"
 										/>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორად
+										</div>
 									</div>
 								</div>
 								<div class="label-input-div">
 									<label for="update-email">ელ. ფოსტა</label>
-									<div class="profile-input-div">
+									<div class="profile-input-div invalid">
 										<div class="input-div-logo">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -296,13 +299,46 @@
 											id="update-email"
 											placeholder="example@gmail.com"
 											autofocus
-											required
 										/>
+										<div class="validation-error-svg">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+											>
+												<g
+													id="Group_15786"
+													data-name="Group 15786"
+													transform="translate(-1112 -424)"
+												>
+													<rect
+														id="Rectangle_794"
+														data-name="Rectangle 794"
+														width="24"
+														height="24"
+														transform="translate(1112 424)"
+														fill="rgba(255,255,255,0)"
+													/>
+													<path
+														id="Info_Square"
+														data-name="Info Square"
+														d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+														transform="translate(1112 424)"
+														fill="#ea433d"
+														fill-rule="evenodd"
+													/>
+												</g>
+											</svg>
+										</div>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორი ფორმატით
+										</div>
 									</div>
 								</div>
 								<div class="label-input-div">
 									<label for="update-tel">მობ. ნომერი</label>
-									<div class="profile-input-div">
+									<div class="profile-input-div invalid">
 										<div class="input-div-logo">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -358,8 +394,41 @@
 											name="update-tel"
 											id="update-tel"
 											placeholder="555 555 555"
-											required
 										/>
+										<div class="validation-error-svg">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+											>
+												<g
+													id="Group_15786"
+													data-name="Group 15786"
+													transform="translate(-1112 -424)"
+												>
+													<rect
+														id="Rectangle_794"
+														data-name="Rectangle 794"
+														width="24"
+														height="24"
+														transform="translate(1112 424)"
+														fill="rgba(255,255,255,0)"
+													/>
+													<path
+														id="Info_Square"
+														data-name="Info Square"
+														d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+														transform="translate(1112 424)"
+														fill="#ea433d"
+														fill-rule="evenodd"
+													/>
+												</g>
+											</svg>
+										</div>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორი ფორმატით
+										</div>
 									</div>
 								</div>
 							</div>
@@ -381,7 +450,7 @@
 									<label for="update-current-password"
 										>მიმდინარე პაროლი</label
 									>
-									<div class="profile-input-div">
+									<div class="profile-input-div invalid">
 										<div class="input-div-logo">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -418,15 +487,48 @@
 											name="update-current-password"
 											id="update-current-password"
 											placeholder="pass****"
-											required
 										/>
+										<div class="validation-error-svg">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+											>
+												<g
+													id="Group_15786"
+													data-name="Group 15786"
+													transform="translate(-1112 -424)"
+												>
+													<rect
+														id="Rectangle_794"
+														data-name="Rectangle 794"
+														width="24"
+														height="24"
+														transform="translate(1112 424)"
+														fill="rgba(255,255,255,0)"
+													/>
+													<path
+														id="Info_Square"
+														data-name="Info Square"
+														d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+														transform="translate(1112 424)"
+														fill="#ea433d"
+														fill-rule="evenodd"
+													/>
+												</g>
+											</svg>
+										</div>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორი ფორმატით
+										</div>
 									</div>
 								</div>
 								<div class="label-input-div">
 									<label for="update-password"
 										>ახალი პაროლი</label
 									>
-									<div class="profile-input-div">
+									<div class="profile-input-div invalid">
 										<div class="input-div-logo">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -463,15 +565,48 @@
 											name="update-password"
 											id="update-password"
 											placeholder="pass****"
-											required
 										/>
+										<div class="validation-error-svg">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+											>
+												<g
+													id="Group_15786"
+													data-name="Group 15786"
+													transform="translate(-1112 -424)"
+												>
+													<rect
+														id="Rectangle_794"
+														data-name="Rectangle 794"
+														width="24"
+														height="24"
+														transform="translate(1112 424)"
+														fill="rgba(255,255,255,0)"
+													/>
+													<path
+														id="Info_Square"
+														data-name="Info Square"
+														d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+														transform="translate(1112 424)"
+														fill="#ea433d"
+														fill-rule="evenodd"
+													/>
+												</g>
+											</svg>
+										</div>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორი ფორმატით
+										</div>
 									</div>
 								</div>
 								<div class="label-input-div">
 									<label for="update-passwordrepeat"
 										>გაიმეორეთ ახალი პაროლი</label
 									>
-									<div class="profile-input-div">
+									<div class="profile-input-div invalid">
 										<div class="input-div-logo">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -508,8 +643,41 @@
 											name="update-passwordrepeat"
 											id="update-passwordrepeat"
 											placeholder="pass****"
-											required
 										/>
+										<div class="validation-error-svg">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+											>
+												<g
+													id="Group_15786"
+													data-name="Group 15786"
+													transform="translate(-1112 -424)"
+												>
+													<rect
+														id="Rectangle_794"
+														data-name="Rectangle 794"
+														width="24"
+														height="24"
+														transform="translate(1112 424)"
+														fill="rgba(255,255,255,0)"
+													/>
+													<path
+														id="Info_Square"
+														data-name="Info Square"
+														d="M16.335,2H7.666C4.268,2,2,4.433,2,7.916v8.168C2,19.571,4.262,22,7.666,22h8.668C19.738,22,22,19.571,22,16.084V7.916C22,4.43,19.738,2,16.335,2ZM7.666,3.5h8.669c2.55,0,4.166,1.735,4.166,4.416v8.168c0,2.681-1.616,4.416-4.167,4.416H7.666c-2.55,0-4.165-1.735-4.165-4.416V7.916C3.5,5.239,5.121,3.5,7.666,3.5ZM12,7.454a.75.75,0,0,1,.1,1.493l-.112.007a.75.75,0,0,1-.1-1.493Zm-.01,3.173a.75.75,0,0,1,.743.648l.007.1V15.8a.75.75,0,0,1-1.493.1l-.007-.1V11.377A.75.75,0,0,1,11.99,10.627Z"
+														transform="translate(1112 424)"
+														fill="#ea433d"
+														fill-rule="evenodd"
+													/>
+												</g>
+											</svg>
+										</div>
+										<div class="validation-error-message">
+											გთხოვთ შეავსოთ სწორი ფორმატით
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1454,6 +1622,12 @@
 		<script src="assets/js/jquery-3.2.1.min.js"></script>
 		<script src="assets/js/swiper.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/profile-validation.js"></script>
+		<script>
+
+
+
+		</script>
 		<script>
 			// login register page vars
 			let loginRegisterMenuButtons = document
@@ -1473,14 +1647,25 @@
 				}
             };
             const openMessageBox = () => {
-                document.querySelector('.success-error-message-outter').classList.toggle('active');
+				document.querySelector('.success-error-message-outter').classList.toggle('active');
+            };
+            const openMessageBoxRemove = () => {
+				document.querySelector('.success-error-message-outter').classList.remove('active');
             };
 
 			// event listeners
 			loginRegisterMenuButtons.forEach((link) => {
 				link.addEventListener("click", switchLoginRegis);
-            });
-            closeMessageBoxBtn.addEventListener('click', openMessageBox)
+			});
+			if (closeMessageBoxBtn) {
+				closeMessageBoxBtn.addEventListener('click', openMessageBox);
+			}
+
+			document.addEventListener('click', obj => {
+				if (closeMessageBoxBtn && obj != closeMessageBoxBtn) {
+					openMessageBoxRemove()
+				} 
+			})
 		</script>
 
 

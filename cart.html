@@ -312,17 +312,14 @@
 														<option
 															disabled
 														></option>
-														<option value="s">
+														<option value="small">
 															s
 														</option>
-														<option value="m">
+														<option value="medium">
 															m
 														</option>
-														<option value="l">
+														<option value="large">
 															l
-														</option>
-														<option selected value="xl">
-															xl
 														</option>
 													</select>
 													<ul class="select-ul"></ul>
@@ -566,14 +563,11 @@
 														<option
 															disabled
 														></option>
-														<option value="s">
+														<option value="small">
 															s
 														</option>
-														<option value="m">
+														<option value="medium">
 															m
-														</option>
-														<option value="l">
-															l
 														</option>
 														<option selected value="xl">
 															xl
@@ -1002,6 +996,11 @@
 					</div>
 				</div>
 			</form>
+			<!-- empty basket -->
+			<div class="basket-empty-message">
+				<h1>კალათა ცარიელია</h1>
+				<p>გადადი <span><a href="index.html">მთავარ გვერდზე</a></span> და დაამატე სასურველი პროდუქცია კალათაში.</p>
+			</div>
 		</main>
 
 		<!-- footer -->
@@ -1593,6 +1592,12 @@
 			
 			const totalPriceInput = document.getElementById('totalPrice');
 			const totalItems = document.getElementById('totalQuantity');
+			totalItems.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
+
+			resizeInput.call(totalItems); // immediately call the function
+			function resizeInput() {
+				this.style.width = this.value.length + "ch";
+			}
 
 			// functions
 			const updateTotalPrice = () => {
@@ -1601,7 +1606,15 @@
 					let quantity = +li.querySelector('.choose-quantity').value;
 					let unitPrice = +li.querySelector('.x1-price-price span:first-child').innerText;
 
+					let secondPriceX = li.querySelector('.secondprice span:first-child');
+					let secondPricePrice = li.querySelector('.secondprice span:last-child span:first-child');
+
+					secondPriceX.innerText = quantity + 'x';
+
 					let liPrice = quantity * unitPrice;
+
+					secondPricePrice.innerText = liPrice + '.00'
+
 					total += liPrice;	
 				})
 				totalPriceInput.value = total;
@@ -1612,6 +1625,7 @@
 			const checkingCartValues = () => {
 				updateTotalPrice();
 				updateTotalItems();
+				resizeInput.call(totalItems);
 			}
 		
 			// run
@@ -1621,6 +1635,8 @@
 		<script src="assets/js/cart-validation.js"></script>
 		<!-- plus & minus and others -->
 		<script>
+
+
 			const chooseSizes = document.querySelectorAll(
 				".choose-size-select"
 			);
@@ -1640,6 +1656,10 @@
 			// const quantityInput = document.
 
 			minuses.forEach((minus) => {
+				let itsInput = minus.closest('.choose-quantity-quantity-div').querySelector('input');
+				if (itsInput.value > 1) {
+					minus.classList.remove('disabled')
+				}
 				minus.addEventListener("click", () => {
 					let quantityInput = minus
 						.closest(".choose-quantity-quantity-div")
@@ -1730,7 +1750,9 @@
 
 				deliveryPriceSpan.innerText = delivPrice;
 			}
-			deliveryPriceUpdater()
+			deliveryPriceUpdater();
+
+
 		</script>
 
 	</body>

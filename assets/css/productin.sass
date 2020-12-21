@@ -19,6 +19,8 @@
     height: 221px
     margin-top: 50px
     margin-bottom: 30px
+    @include sizePlus(500px)
+        height: 381px    
     @include plus769()
         height: 350px
     @include plus1025()
@@ -168,9 +170,11 @@
     .ho-hr
         height: 28px
         background-color: $blackFont
+        transform: translateX(-10px)
     .select-ul
-        display: grid
-        grid-template-columns: repeat(4, auto)
+        display: flex
+        flex-wrap: wrap
+        padding-right: 30px
         grid-gap: 30px
         text-transform: uppercase
         li
@@ -215,6 +219,10 @@
     margin-bottom: 50px
     @include plus1025()
         margin-bottom: 0
+        &:hover
+            background-color: #A38CEB  
+    &:active
+        background-color: #A38CEB
     svg
         margin-right: 15px
 
@@ -248,6 +256,9 @@
     top: 50%
     transform: translateY(-50%)
     right: 0  
+    width: 50px
+    height: 50px
+    border-radius: 50%
     cursor: pointer  
     display: flex
     justify-content: center
@@ -256,3 +267,8 @@
     @include plus1025()
         display: none
 
+.size-guide-btn
+    margin-top: 1em
+    display: block
+    color: #3498db
+    cursor: pointer

@@ -92,7 +92,7 @@ footer
 
 
 // info message window
-.success-error-message-outter
+.success-error-message-outter, .productin-size-guide
     position: fixed
     width: 0
     height: 0
@@ -111,7 +111,7 @@ footer
         width: 100%
         opacity: 1
         z-index: 4
-.success-error-message
+.success-error-message, .productin-size-guide-image-container
     position: relative
     display: flex
     flex-direction: column
@@ -137,3 +137,12 @@ footer
         height: 20px
 .sign-svg-div
     margin-bottom: 72px
+.productin-size-guide
+    img
+        height: 100%
+        width: 100%
+        object-fit: cover
+.productin-size-guide-image-container
+    width: 100%
+    height: 100%
+    max-width: 80%
