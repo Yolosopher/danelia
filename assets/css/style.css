@@ -3299,6 +3299,7 @@ input[type=number] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #FBFBFF;
 }
 
 @media screen and (min-width: 769px) {
@@ -3310,8 +3311,14 @@ input[type=number] {
         grid-template-columns: 260px 1fr 260px;
     -ms-grid-rows: minmax(75px, auto);
         grid-template-rows: minmax(75px, auto);
-    margin-top: 86px;
-    margin-bottom: 73px;
+    margin-top: 66px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 53px;
+    z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 }
 
@@ -3483,6 +3490,7 @@ input[type=number] {
 
 @media screen and (min-width: 769px) {
   .basket-items-ul > li {
+    overflow-x: hidden;
     height: unset;
     padding: 60px 0;
     padding-right: 55px;

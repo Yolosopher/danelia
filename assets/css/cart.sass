@@ -47,12 +47,18 @@
     margin-bottom: 50px
     grid-template-columns: auto auto
     justify-content: space-between
+    background-color: #FBFBFF
     @include plus769()
         align-items: center
         grid-template-columns: 260px 1fr 260px
         grid-template-rows: minmax(75px, auto)
-        margin-top: 86px
-        margin-bottom: 73px
+        margin-top: 66px
+        padding-top: 20px
+        padding-bottom: 20px
+        margin-bottom: 53px
+        z-index: 1
+        position: sticky
+        top: 0
     > * 
         display: flex
         flex-direction: column
@@ -151,6 +157,7 @@
         color: #fff
         height: 161px
         @include plus769()
+            overflow-x: hidden
             height: unset
             padding: 60px 0
             padding-right: 55px
