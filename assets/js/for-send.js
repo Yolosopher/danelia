@@ -1,28 +1,55 @@
-// variables
-let basketItems = document.querySelectorAll('.basket-items-ul > li');
 
-const totalPriceInput = document.getElementById('totalPrice');
-const totalItems = document.getElementById('totalQuantity');
+		const addBtnAnimation = (btn) => {
+			console.log(this);
+			btn.classList.toggle('product-added');
+			
+			let parent = btn.closest('.product-section-li-imgbox');
+			parent.classList.add('active')
 
-// functions
-const updateTotalPrice = () => {
-    let total = 0;
-    basketItems.forEach(li => {
-        let quantity = +li.querySelector('.choose-quantity').value;
-        let unitPrice = +li.querySelector('.x1-price-price span:first-child').innerText;
+			setTimeout(() => {            
+				btn.classList.remove('product-added');
+			}, 1800);
 
-        let liPrice = quantity * unitPrice;
-        total += liPrice;	
-    })
-    totalPriceInput.value = total;
-}
-const updateTotalItems = () => {
-    totalItems.value = basketItems.length;
-}
-const checkingCartValues = () => {
-    updateTotalPrice();
-    updateTotalItems();
-}
+			setTimeout(() => {        
+				parent.classList.remove('active')
+			}, 2500);
+		}
+        function addToCart(elem) 
+        {
+            let qty = null;
+            let selectedSize = null;
+            let currentRoute = "personal"
+            let id = parseFloat($(elem).data('id'));            
+          
+            if(currentRoute == 'productin')
+            {
+                qty = $(elem).prev().find('.choose-quantity-quantity-div').find('input').val();
+                
+                selectedSize = $('ul.select-ul').find('li.active').text();
+            }else{
+				qty = 1;
+				selectedSize = null;
+			}
 
-// run
-// checkingCartValues();
+            $.ajax({
+                url: "https://squadwear.ge/add_to_cart",
+                method: "get",
+                data:{id: id, qty: qty, size: selectedSize},
+                success: function(data)
+                {
+                    if(data.status) {
+                        // დაემატა
+                    } else {
+                        // ვერ დაემატა
+                    }
+                },
+                error: function(error)
+                {
+                    console.log(error);
+                }
+            });
+            
+            return false;            
+        }
+        
+    

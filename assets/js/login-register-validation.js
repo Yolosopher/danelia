@@ -131,7 +131,6 @@ const forms = document.querySelectorAll('form');
 forms.forEach(form => {
     form.addEventListener('submit', (e) => {
         let inputDivs = form.querySelectorAll('.input-div.invalid');
-        console.log(inputDivs);
         if (inputDivs[0]) {
             inputDivs.forEach(each => {
                 each.classList.add('invalid-shown');

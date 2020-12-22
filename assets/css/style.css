@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1064,7 +1065,7 @@ input[type=number] {
   position: absolute;
   overflow: visible;
   z-index: 1;
-  left: -40px;
+  right: 80px;
 }
 
 .article-right {
@@ -2093,7 +2094,7 @@ form {
 
 #personal-info-form label, #update-password-form label {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 18px;
 }
 
 #personal-info-form label span, #update-password-form label span {
@@ -2944,7 +2945,7 @@ input[type=number] {
   width: 100%;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 500px) {
   .product-info-right {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -5048,10 +5049,15 @@ input[type=number] {
   grid-column: 1 / -1;
 }
 
+@media screen and (min-width: 500px) {
+  .product-see-more {
+    margin: 0 auto;
+    width: 201px;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .product-see-more {
-    width: 201px;
-    margin: 0 auto;
     margin-top: 28px;
   }
   .product-see-more:hover {
@@ -5214,7 +5220,7 @@ input[type=number] {
   position: absolute;
   display: none;
   right: 0;
-  top: -25px;
+  top: -25pxს;
   height: unset !important;
   font-family: bld;
   font-size: 11px;
@@ -5242,7 +5248,7 @@ input[type=number] {
 }
 
 #update-password-form .validation-error-message, #personal-info-form .validation-error-message {
-  top: -15px;
+  top: -20px;
 }
 
 .g-recaptcha {
@@ -5377,5 +5383,51 @@ input[type=number] {
 .product-info-form-right {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+.recovery-main.sent form {
+  display: none;
+}
+
+.recovery-main.sent .recovery-sent-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recovery-sent-message {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 300px;
+  height: 100%;
+  font-family: uppercasebold !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  font-size: 22px;
+  line-height: 25px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recovery-sent-message > div {
+  margin-bottom: 37px;
+}
+
+.recovery-sent-message span {
+  color: #EA433D;
+}
+
+.productin-main .product-info-form-right label {
+  margin-bottom: 13px;
 }
 /*# sourceMappingURL=style.css.map */

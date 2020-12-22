@@ -35,7 +35,7 @@
     position: absolute
     display: none
     right: 0
-    top: -25px
+    top: -25pxს
     height: unset !important
     font-family: bld
     font-size: 11px
@@ -59,7 +59,7 @@
     
 #update-password-form, #personal-info-form
     .validation-error-message
-        top: -15px
+        top: -20px
 
 
         
@@ -148,4 +148,33 @@
 .product-info-form-right
     align-self: flex-start
 
+// recovery
+.recovery-main.sent
+    form
+        display: none
+    .recovery-sent-message
+        display: flex
+.recovery-sent-message
+    display: none
+    flex-direction: column
+    min-height: 300px
+    height: 100%
+    @include upperCase(false)
+    font-size: 22px
+    line-height: 25px
+    max-width: 700px
+    margin: 0 auto
+    text-align: center
+    justify-content: center
+    align-items: center
+    > div
+        margin-bottom: 37px
+    span
+        color: $lightred
 
+
+
+.productin-main
+    .product-info-form-right
+        label
+            margin-bottom: 13px
