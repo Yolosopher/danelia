@@ -35,7 +35,7 @@
     position: absolute
     display: none
     right: 0
-    top: -25pxს
+    top: -25px
     height: unset !important
     font-family: bld
     font-size: 11px
@@ -108,7 +108,8 @@
         display: none
     .basket-empty-message
         display: flex
-
+li > .imgbox-hover-menu
+    overflow: hidden
 .storage-empty
     display: flex
     height: 60px
@@ -172,9 +173,45 @@
     span
         color: $lightred
 
-
+.imgbox-hover-menu .imgbox-hover-menu-bag.product-added .add-animation-span-center
+    margin-left: 0 !important
+    margin-right: 10px !important
+    width: 48px !important
+    // justify-self: center !important
+    @include sizePlus(420px)                     
+        margin-left: 10px !important
+        margin-right: 10px !important
+        width: 56px !important
 
 .productin-main
     .product-info-form-right
         label
             margin-bottom: 13px
+
+
+.productin-submit-default, .productin-submit-added
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    opacity: 0
+    transition: opacity .19s ease-out, transform .6s ease-in-out
+
+.productin-submit-added
+    transform: translateY(-200%)
+    svg
+        margin-left: 10px
+        margin-right: 5px
+.productin-submit
+    .productin-submit-default
+        opacity: 1
+        transform: translateY(0)
+    &.product-added
+        background-color: #A38CEB  
+        transition-duration: .6s
+        .productin-submit-default
+            opacity: 0
+            transform: translateY(200%)
+        .productin-submit-added
+            opacity: 1            
+            transform: translateY(0)

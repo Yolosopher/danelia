@@ -220,8 +220,87 @@
                         opacity: 1
                         transition-duration: .6s
                         transition-delay: .3s
-                    
-           
+
+
+
+
+
+
+.imgbox-hover-menu
+    justify-content: center
+    align-items: center
+
+    .imgbox-hover-menu-bag
+        white-space: nowrap
+        color: #fff
+        @include upperCase(true)
+        font-size: 16px
+        line-height: 18px
+        overflow: visible
+    svg
+        min-width: 24px
+        min-height: 24px
+        margin: 0
+        position: static
+        transition-duration: .6s 
+        transition-timing-function: ease-in-out          
+    .imgbox-hover-menu-bag
+        display: grid !important
+        grid-template-columns: repeat(3, auto)
+        grid-template-rows: 100%
+        align-content: center
+        border-radius: 28px
+        width: 100%
+        transition-duration: .6s 
+        transition-timing-function: ease-in-out
+        padding: 0
+        position: relative                 
+        min-width: 56px
+        min-height: 56px
+        max-width: 56px
+        max-height: 56px
+        *                
+            transition-duration: .6s 
+            transition-timing-function: ease-in-out
+        .add-animation-span-left
+            overflow: hidden
+            display: flex
+            align-items: center
+            height: 100%
+            white-space: nowrap
+            transform: translateX(-150%)
+            opacity: 0
+            transition-delay: .2s
+
+        .add-animation-span-center
+            margin-left: 10px
+            margin-right: 10px
+            width: 56px
+            justify-self: center
+
+        .add-animation-span-right
+            overflow: hidden
+            display: flex
+            opacity: 0
+            margin-left: -20px
+            transform: translateX(500%)
+            transition-duration: .7s
+            transition-delay: 0s
+        &.product-added
+            background-color: #CA1C16
+            max-width: 301px    
+            .add-animation-span-left
+                transform: translateX(0)
+                opacity: 1
+            .add-animation-span-center
+
+                
+            .add-animation-span-right
+                transform: translateX(0)
+                opacity: 1
+                transition-duration: .6s
+                transition-delay: .3s
+            
 
 .product-section-ul
     display: grid
@@ -334,6 +413,9 @@
     background-color: #FEB42B
 .imgbox-hover-menu-bag
     background-color: #EA433D
+    @include plus1025()
+        &:hover
+            background-color: #CA1C16
 
 .product-section-li-price
     margin-bottom: 15px
